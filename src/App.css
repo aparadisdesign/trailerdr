@@ -1,0 +1,190 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-top: var(--header-height);
+}
+
+/* ---- Shared Section Styles ---- */
+
+.section {
+  padding: 5rem 1.5rem;
+}
+
+.section--dark {
+  background: var(--color-bg-dark);
+  color: var(--color-text-inverse);
+}
+
+.section--muted {
+  background-color: var(--color-bg-muted);
+  background-image:
+    radial-gradient(
+      ellipse 120% 55% at 50% -10%,
+      color-mix(in srgb, var(--color-primary) 7%, transparent),
+      transparent 58%
+    ),
+    linear-gradient(
+      180deg,
+      var(--color-bg-muted) 0%,
+      color-mix(in srgb, var(--color-bg-muted) 45%, var(--color-bg)) 35%,
+      var(--color-bg) 100%
+    );
+}
+
+.section--muted-solid {
+  background: var(--color-bg-muted);
+}
+
+/* Product page: light hero (no dark background) */
+.section.section--product-hero {
+  background: var(--color-bg);
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: calc(4.5rem + var(--header-height));
+  padding-bottom: 4.5rem;
+}
+
+/* Inner pages: deep blue hero band (matches home base color; no gradient/texture) */
+.section.section--page-hero {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: calc(4.5rem + var(--header-height));
+  padding-bottom: 4.5rem;
+}
+
+.section--page-hero .section-label {
+  color: var(--color-accent-on-dark);
+  border-left-color: var(--color-accent-on-dark);
+}
+
+.section--page-hero .section-title {
+  color: var(--color-text-inverse);
+}
+
+.section--page-hero .section-subtitle {
+  color: var(--color-text-inverse-muted);
+}
+
+.section--page-hero p {
+  color: var(--color-text-inverse-muted);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+  border-left: 3px solid var(--color-accent);
+  padding-left: 0.6rem;
+}
+
+.section-title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.section--dark .section-subtitle {
+  color: var(--color-text-inverse-muted);
+}
+
+.section--dark .section-label {
+  color: var(--color-accent-on-dark);
+  border-left-color: var(--color-accent-on-dark);
+}
+
+.section--dark p {
+  color: var(--color-text-inverse-muted);
+}
+
+/* ---- Buttons ---- */
+
+.btn {
+  display: inline-block;
+  position: relative;
+  padding: 0.9rem 2.25rem;
+  border-radius: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border: none;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-aaa);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 2px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--outline:hover {
+  border-color: var(--color-accent-aaa);
+  color: var(--color-accent-aaa);
+}
+
+.btn--outline-light {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.btn--outline-light:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn--accent:hover {
+  background: var(--color-accent-hover);
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}

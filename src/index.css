@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Industrial: dark blues & greys, red accent — AAA contrast (7:1 normal, 4.5:1 large) */
+  --color-primary: #0a1628;
+  --color-primary-hover: #0d2135;
+  --color-primary-alt: #1e293b;
+  --color-accent: #c41e3a;
+  --color-accent-hover: #9a1830;
+  /* AAA-compliant red for light backgrounds (7:1+) */
+  --color-accent-aaa: #7f1d1d;
+  /* Vivid red for dark backgrounds */
+  --color-accent-on-dark: #ff4040;
+  --color-bg: #fafbfc;
+  --color-bg-dark: #060a0f;
+  --color-bg-muted: #f0f3f6;
+  --color-text: #0f172a;
+  --color-text-light: #334155;
+  --color-text-inverse: #ffffff;
+  /* Secondary copy on dark backgrounds (primary / bg-dark) */
+  --color-text-inverse-muted: rgba(255, 255, 255, 0.8);
+  --color-border: #cbd5e1;
+  --max-width: 1140px;
+  /* Promo strip + main nav (see Header.tsx / Header.css) */
+  --promo-bar-height: 3.5rem;
+  --header-height: calc(var(--promo-bar-height) + 4.5rem);
+
+  --radius-mixed: 0;
+  --radius-mixed-sm: 0;
+}
+
+@media (max-width: 480px) {
+  :root {
+    /* Long inline link wraps; keep main offset in sync */
+    --promo-bar-height: 6rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

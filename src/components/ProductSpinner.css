@@ -1,0 +1,188 @@
+.product-spinner {
+  position: relative;
+  width: 100%;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.product-spinner--empty {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.product-spinner__frame {
+  position: relative;
+  border-radius: var(--radius-mixed);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: grab;
+}
+
+.product-spinner--dragging .product-spinner__frame {
+  cursor: grabbing;
+}
+
+.product-spinner__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  pointer-events: none;
+  transform: scale(1.18);
+}
+
+/* ---- Arrows ---- */
+
+.product-spinner__controls {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: 4 / 3;
+  pointer-events: none;
+}
+
+.product-spinner__btn {
+  pointer-events: all;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background: rgba(10, 22, 40, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.15s, border-color 0.15s;
+}
+
+/* Left arrow: inset into white space */
+.product-spinner__btn--prev {
+  left: 8%;
+  border-radius: 0 12px 0 12px;
+  opacity: 0;
+}
+
+.product-spinner__btn--next {
+  right: 8%;
+  border-radius: 12px 0 12px 0;
+  opacity: 0;
+}
+
+.product-spinner:hover .product-spinner__btn--prev,
+.product-spinner:focus-within .product-spinner__btn--prev {
+  opacity: 1;
+}
+
+.product-spinner:hover .product-spinner__btn--next,
+.product-spinner:focus-within .product-spinner__btn--next {
+  opacity: 1;
+}
+
+/* always fully visible on touch devices */
+@media (hover: none) {
+  .product-spinner__btn--prev,
+  .product-spinner__btn--next {
+    opacity: 0.8;
+  }
+}
+
+/* on small screens pull arrows to the frame edges where the white margin is */
+@media (max-width: 640px) {
+  .product-spinner__btn {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .product-spinner__btn .material-symbols-outlined {
+    font-size: 1rem;
+  }
+
+  .product-spinner__btn--prev {
+    left: 0.4rem;
+  }
+
+  .product-spinner__btn--next {
+    right: 0.4rem;
+  }
+}
+
+.product-spinner__btn:hover {
+  background: rgba(10, 22, 40, 0.55);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.product-spinner__btn:active {
+  background: rgba(10, 22, 40, 0.75);
+}
+
+.product-spinner__btn:focus-visible {
+  outline: 2px solid var(--color-accent-on-dark);
+  outline-offset: 2px;
+  opacity: 1;
+}
+
+.product-spinner__btn .material-symbols-outlined {
+  font-size: 1.25rem;
+  font-variation-settings: "wght" 200;
+}
+
+/* ---- Footer: rotate badge → progress bar ---- */
+
+.product-spinner__footer {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Rotate badge */
+.product-spinner__rotate-badge {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.product-spinner__rotate-icon {
+  font-size: 2.25rem;
+  font-variation-settings: "wght" 200;
+  animation: spinner-sweep 1.6s ease-in-out infinite;
+  transform-origin: center;
+  display: inline-block;
+}
+
+@keyframes spinner-sweep {
+  0%   { transform: rotate(0deg); }
+  40%  { transform: rotate(30deg); }
+  60%  { transform: rotate(30deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Progress bar */
+.product-spinner__progress {
+  width: 6rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.product-spinner__progress-fill {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  transition: width 0.1s linear;
+}
