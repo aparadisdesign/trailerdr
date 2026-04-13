@@ -27,12 +27,35 @@ function About() {
             </p>
           </div>
 
-          {/* IMAGE PLACEHOLDER: Founder portrait of Bruce Theriault — ideally a candid
-              shot in a shop or field environment alongside a trailer or heavy equipment.
-              Natural and hands-on works better than a studio headshot. */}
-          <div className="about-img-placeholder about-img-placeholder--portrait">
-            <span className="material-symbols-outlined" aria-hidden="true">person</span>
-            <p>Bruce Theriault, Founder</p>
+          <div
+            className="about-hero-collage"
+            role="group"
+            aria-label="Trailer Dr. diagnostic tool with standard remote and optional rechargeable remote with work light"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="about-hero-collage__img about-hero-collage__img--product"
+              src="/images/trailerdr-product-image.webp"
+              alt=""
+              width={640}
+              height={480}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="about-hero-collage__img about-hero-collage__img--remote about-hero-collage__img--remote-left"
+              src="/images/standard-battery-powered-remote.webp"
+              alt=""
+              width={320}
+              height={320}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="about-hero-collage__img about-hero-collage__img--remote about-hero-collage__img--remote-right"
+              src="/images/rechargable-remote-w-flashlight.webp"
+              alt=""
+              width={320}
+              height={320}
+            />
           </div>
         </div>
       </section>

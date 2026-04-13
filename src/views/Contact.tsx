@@ -102,7 +102,7 @@ function Contact() {
             {status === "success" ? (
               <div className="contact-success">
                 <h3>Thank you for your message!</h3>
-                <p>We'll get back to you as soon as possible.</p>
+                <p>We'll get back to you as soon as possible. You can also call us directly at <a href="tel:+12072314967">(207) 231-4967</a>.</p>
               </div>
             ) : (
               <form
