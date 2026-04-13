@@ -1,25 +1,13 @@
+"use client";
+
 import { useCallback, useState } from "react";
 import "./ProductSpinner.css";
 
-const productSpinnerGlob = import.meta.glob<{ default: string }>(
-  "../assets/images/product-spinner-v2/*.{webp,jpg,jpeg,png}",
-  { eager: true, query: "?url", import: "default" }
+// Static list of 360° spinner frames from public/images/product-spinner-v2/
+const SPINNER_IMAGES: string[] = Array.from(
+  { length: 32 },
+  (_, i) => `/images/product-spinner-v2/4J0A${2933 + i}.webp`
 );
-const fallbackGlob = import.meta.glob<{ default: string }>(
-  "../assets/images/4J0A*.webp",
-  { eager: true, query: "?url", import: "default" }
-);
-
-function getSpinnerUrls(): string[] {
-  const glob = Object.keys(productSpinnerGlob).length > 0 ? productSpinnerGlob : fallbackGlob;
-  const entries = Object.entries(glob);
-  if (entries.length === 0) return [];
-  return entries
-    .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
-    .map(([, url]) => (typeof url === "string" ? url : (url as { default: string }).default));
-}
-
-const SPINNER_IMAGES = getSpinnerUrls();
 
 export default function ProductSpinner() {
   const [index, setIndex] = useState(0);
@@ -90,6 +78,7 @@ export default function ProductSpinner() {
       <div
         className={`product-spinner__frame${index === 14 ? " product-spinner__frame--frame-15" : ""}`}
       >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={SPINNER_IMAGES[index]}
           alt={`Trailer Dr. interactive 360° product view`}
