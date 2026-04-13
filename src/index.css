@@ -28,7 +28,7 @@
   --color-border: #cbd5e1;
   --max-width: 1140px;
   /* Promo strip + main nav (see Header.tsx / Header.css) */
-  --promo-bar-height: 3.5rem;
+  --promo-bar-height: 2.5rem;
   --header-height: calc(var(--promo-bar-height) + 4.5rem);
 
   --radius-mixed: 0;

@@ -171,14 +171,17 @@
 .contact-success {
   text-align: center;
   padding: 3rem 1rem;
+  /* Page hero sets light text on the section; form card content stays dark */
+  color: var(--color-text);
 }
 
 .contact-success h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: var(--color-text);
 }
 
-.contact-success p {
+.section--page-hero .contact-success p {
   color: var(--color-text-light);
 }
 
