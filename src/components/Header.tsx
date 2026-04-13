@@ -1,14 +1,15 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import logoWhite from "../assets/images/trailer-dr-logo-white.png";
-import logoBlack from "../assets/images/trailer-dr-logo-black.png";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { PayPalCartButton } from "./PayPalCart";
 import "./Header.css";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { pathname } = useLocation();
+  const pathname = usePathname();
   const lightHero = pathname === "/product";
 
   useEffect(() => {
@@ -16,6 +17,25 @@ function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const logoSrc =
+    scrolled || lightHero
+      ? "/images/trailer-dr-logo-black.png"
+      : "/images/trailer-dr-logo-white.png";
+
+  const navLink = (href: string, label: string, end = false) => {
+    const isActive = end ? pathname === href : (pathname?.startsWith(href) ?? false);
+    return (
+      <Link
+        href={href}
+        onClick={() => setMenuOpen(false)}
+        aria-current={isActive ? "page" : undefined}
+        className={isActive ? "active" : undefined}
+      >
+        {label}
+      </Link>
+    );
+  };
 
   return (
     <div className="site-header">
@@ -28,7 +48,7 @@ function Header() {
               ·{" "}
             </span>
             Money-back guarantee if you are not satisfied.{" "}
-            <Link to="/product" className="promo-bar__link">
+            <Link href="/product" className="promo-bar__link">
               Learn how Trailer Dr. works.
             </Link>
           </p>
@@ -38,12 +58,9 @@ function Header() {
         className={`header${scrolled ? " header--scrolled" : ""}${lightHero && !scrolled ? " header--light" : ""}`}
       >
         <div className="header__inner">
-          <Link to="/" className="header__logo" aria-label="Trailer Dr. Home">
-            <img
-              src={scrolled || lightHero ? logoBlack : logoWhite}
-              alt="Trailer Dr."
-              className="header__logo-img"
-            />
+          <Link href="/" className="header__logo" aria-label="Trailer Dr. Home">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={logoSrc} alt="Trailer Dr." className="header__logo-img" />
           </Link>
 
           <button
@@ -57,21 +74,11 @@ function Header() {
           </button>
 
           <nav className={`header__nav ${menuOpen ? "header__nav--open" : ""}`}>
-            <NavLink to="/" end onClick={() => setMenuOpen(false)}>
-              Home
-            </NavLink>
-            <NavLink to="/about" onClick={() => setMenuOpen(false)}>
-              About
-            </NavLink>
-            <NavLink to="/features" onClick={() => setMenuOpen(false)}>
-              Features &amp; Specs
-            </NavLink>
-            <NavLink to="/product" onClick={() => setMenuOpen(false)}>
-              Buy
-            </NavLink>
-            <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
-              Contact
-            </NavLink>
+            {navLink("/", "Home", true)}
+            {navLink("/about", "About")}
+            {navLink("/features", "Features & Specs")}
+            {navLink("/product", "Buy")}
+            {navLink("/contact", "Contact")}
           </nav>
 
           <div className="header__cart">

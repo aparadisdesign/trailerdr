@@ -1,0 +1,175 @@
+/* [project]/src/App.css [app-client] (css) */
+.app {
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+}
+
+main {
+  padding-top: var(--header-height);
+  flex: 1;
+}
+
+.section {
+  padding: 5rem 1.5rem;
+}
+
+.section--dark {
+  background: var(--color-bg-dark);
+  color: var(--color-text-inverse);
+}
+
+.section--muted {
+  background-color: var(--color-bg-muted);
+  background-image: radial-gradient(ellipse 120% 55% at 50% -10%,
+      color-mix(in srgb, var(--color-primary) 7%, transparent),
+      transparent 58%),
+    linear-gradient(180deg,
+      var(--color-bg-muted) 0%,
+      color-mix(in srgb, var(--color-bg-muted) 45%, var(--color-bg)) 35%,
+      var(--color-bg) 100%);
+}
+
+.section--muted-solid {
+  background: var(--color-bg-muted);
+}
+
+.section.section--product-hero {
+  background: var(--color-bg);
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: calc(4.5rem + var(--header-height));
+  padding-bottom: 4.5rem;
+}
+
+.section.section--page-hero {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: calc(4.5rem + var(--header-height));
+  padding-bottom: 4.5rem;
+}
+
+.section--page-hero .section-label {
+  color: var(--color-accent-on-dark);
+  border-left-color: var(--color-accent-on-dark);
+}
+
+.section--page-hero .section-title {
+  color: var(--color-text-inverse);
+}
+
+.section--page-hero .section-subtitle, .section--page-hero p {
+  color: var(--color-text-inverse-muted);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: var(--color-accent);
+  border-left: 3px solid var(--color-accent);
+  margin-bottom: .75rem;
+  padding-left: .6rem;
+  font-size: .75rem;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.section-title {
+  letter-spacing: -.02em;
+  margin-bottom: 1rem;
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.section-subtitle {
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.section--dark .section-subtitle {
+  color: var(--color-text-inverse-muted);
+}
+
+.section--dark .section-label {
+  color: var(--color-accent-on-dark);
+  border-left-color: var(--color-accent-on-dark);
+}
+
+.section--dark p {
+  color: var(--color-text-inverse-muted);
+}
+
+.btn {
+  letter-spacing: .02em;
+  cursor: pointer;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+  border: none;
+  border-radius: 0;
+  padding: .9rem 2.25rem;
+  font-size: .95rem;
+  font-weight: 700;
+  transition: background .18s, color .18s, border-color .18s;
+  display: inline-block;
+  position: relative;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-aaa);
+}
+
+.btn--outline {
+  border: 2px solid var(--color-border);
+  color: var(--color-text);
+  background: none;
+}
+
+.btn--outline:hover {
+  border-color: var(--color-accent-aaa);
+  color: var(--color-accent-aaa);
+}
+
+.btn--outline-light {
+  color: #fff;
+  background: none;
+  border: 2px solid #fff6;
+}
+
+.btn--outline-light:hover {
+  background: #ffffff14;
+  border-color: #fff;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn--accent:hover {
+  background: var(--color-accent-hover);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=src_App_css_0w3-wzy._.single.css.map*/

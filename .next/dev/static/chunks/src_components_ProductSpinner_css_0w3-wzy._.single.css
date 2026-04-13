@@ -1,0 +1,186 @@
+/* [project]/src/components/ProductSpinner.css [app-client] (css) */
+.product-spinner {
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+  width: 100%;
+  position: relative;
+}
+
+.product-spinner--empty {
+  aspect-ratio: 4 / 3;
+  justify-content: center;
+  align-items: center;
+  font-size: .9rem;
+  display: flex;
+}
+
+.product-spinner__frame {
+  border-radius: var(--radius-mixed);
+  aspect-ratio: 4 / 3;
+  cursor: grab;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-spinner--dragging .product-spinner__frame {
+  cursor: grabbing;
+}
+
+.product-spinner__image {
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: scale(1.18);
+}
+
+.product-spinner__controls {
+  aspect-ratio: 4 / 3;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.product-spinner__btn {
+  pointer-events: all;
+  -webkit-backdrop-filter: blur(6px);
+  color: #ffffffe6;
+  cursor: pointer;
+  background: #0a162840;
+  border: 1px solid #ffffff2e;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  transition: opacity .2s, background .15s, border-color .15s;
+  display: inline-flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.product-spinner__btn--prev {
+  opacity: 0;
+  border-radius: 0 12px;
+  left: 8%;
+}
+
+.product-spinner__btn--next {
+  opacity: 0;
+  border-radius: 12px 0;
+  right: 8%;
+}
+
+.product-spinner:hover .product-spinner__btn--prev, .product-spinner:focus-within .product-spinner__btn--prev, .product-spinner:hover .product-spinner__btn--next, .product-spinner:focus-within .product-spinner__btn--next {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .product-spinner__btn--prev, .product-spinner__btn--next {
+    opacity: .8;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-spinner__btn {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .product-spinner__btn .material-symbols-outlined {
+    font-size: 1rem;
+  }
+
+  .product-spinner__btn--prev {
+    left: .4rem;
+  }
+
+  .product-spinner__btn--next {
+    right: .4rem;
+  }
+}
+
+.product-spinner__btn:hover {
+  background: #0a16288c;
+  border-color: #ffffff59;
+}
+
+.product-spinner__btn:active {
+  background: #0a1628bf;
+}
+
+.product-spinner__btn:focus-visible {
+  outline: 2px solid var(--color-accent-on-dark);
+  outline-offset: 2px;
+  opacity: 1;
+}
+
+.product-spinner__btn .material-symbols-outlined {
+  font-variation-settings: "wght" 200;
+  font-size: 1.25rem;
+}
+
+.product-spinner__footer {
+  z-index: 2;
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  bottom: .85rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.product-spinner__rotate-badge {
+  color: #ffffffa6;
+  align-items: center;
+  display: inline-flex;
+}
+
+.product-spinner__rotate-icon {
+  font-variation-settings: "wght" 200;
+  transform-origin: center;
+  font-size: 2.25rem;
+  animation: 1.6s ease-in-out infinite spinner-sweep;
+  display: inline-block;
+}
+
+@keyframes spinner-sweep {
+  0% {
+    transform: rotate(0);
+  }
+
+  40% {
+    transform: rotate(30deg);
+  }
+
+  60% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.product-spinner__progress {
+  background: #fff3;
+  border-radius: 999px;
+  width: 6rem;
+  height: 2px;
+  overflow: hidden;
+}
+
+.product-spinner__progress-fill {
+  background: #ffffffa6;
+  border-radius: 999px;
+  height: 100%;
+  transition: width .1s linear;
+}
+
+/*# sourceMappingURL=src_components_ProductSpinner_css_0w3-wzy._.single.css.map*/

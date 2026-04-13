@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import logoWhite from "../assets/images/trailer-dr-logo-white.png";
+import Link from "next/link";
 import "./Footer.css";
 
 function Footer() {
@@ -7,8 +6,13 @@ function Footer() {
     <footer className="footer">
       <div className="footer__inner">
         <div className="footer__brand">
-          <Link to="/" className="footer__logo" aria-label="Trailer Dr. Home">
-            <img src={logoWhite} alt="Trailer Dr." className="footer__logo-img" />
+          <Link href="/" className="footer__logo" aria-label="Trailer Dr. Home">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/trailer-dr-logo-white.png"
+              alt="Trailer Dr."
+              className="footer__logo-img"
+            />
           </Link>
           <p className="footer__tagline">
             Portable electrical and air brake trailer diagnostic tool for
@@ -17,11 +21,11 @@ function Footer() {
         </div>
 
         <div className="footer__links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/features">Features &amp; Specs</Link>
-          <Link to="/product">Buy</Link>
-          <Link to="/contact">Contact</Link>
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/features">Features &amp; Specs</Link>
+          <Link href="/product">Buy</Link>
+          <Link href="/contact">Contact</Link>
         </div>
 
         <div className="footer__contact">
