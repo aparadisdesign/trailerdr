@@ -222,30 +222,6 @@ function Features() {
         </div>
       </section>
 
-      {/* Price */}
-      <section className="section">
-        <div className="container features-price">
-          <div className="features-price__content">
-            <h2 className="section-title">Price &amp; Value</h2>
-            <p className="section-subtitle">
-              Professional electrical and air brake diagnostics at a fraction
-              of the cost of full-scale inspection systems.
-            </p>
-            <ul className="features-price__details">
-              <li><strong>$3,195</strong>, free shipping within the USA</li>
-              <li><strong>1-year warranty</strong> with 48-hr repair turnaround</li>
-              <li><strong>Free 30-day trial</strong> (buyer covers return shipping)</li>
-            </ul>
-          </div>
-          <div className="features-price__actions">
-            <PayPalAddToCartButton />
-            <Link href="/contact" className="btn btn--outline">
-              Schedule a Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="section section--dark">
         <div className="container features-cta">
