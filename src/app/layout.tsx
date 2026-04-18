@@ -13,9 +13,33 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Trailer Dr. | Electrical & Air Brake Trailer Diagnostic Tool",
+  metadataBase: new URL("https://www.thetrailerdr.com"),
+  title: {
+    default: "Trailer Dr. | Electrical & Air Brake Trailer Diagnostic Tool",
+    template: "%s | Trailer Dr.",
+  },
   description:
-    "Trailer Dr. is a portable electrical and air brake trailer diagnostic tool. Verify trailer lighting, air supply, and brake activation from the rear of the trailer. Used by fleets, repair shops, and mobile service operators across the USA.",
+    "Trailer Dr. is a portable electrical and air brake trailer diagnostic tool. Verify trailer lighting, air supply, and brake activation from the rear of the trailer — no truck or second person needed. Used by fleets, repair shops, and mobile service operators across the USA.",
+  openGraph: {
+    siteName: "Trailer Dr.",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/images/trailerdr-product-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "Trailer Dr. Electrical & Air Brake Trailer Diagnostic Tool",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/trailerdr-product-image.webp"],
+  },
+  alternates: {
+    canonical: "https://www.thetrailerdr.com",
+  },
 };
 
 export default function RootLayout({
