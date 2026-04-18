@@ -6,10 +6,10 @@ import { PayPalAddToCartButton } from "../components/PayPalCart";
 import "./Product.css";
 
 const gallery = [
-  { src: "/images/trailerdr-product-image.webp",          alt: "Trailer Dr. diagnostic tool — Front View" },
-  { src: "/images/product-spinner-v2/4J0A2941.webp",      alt: "Trailer Dr. diagnostic tool — Left Side View" },
-  { src: "/images/product-spinner-v2/4J0A2949.webp",      alt: "Trailer Dr. diagnostic tool — Back View" },
-  { src: "/images/product-spinner-v2/4J0A2957.webp",      alt: "Trailer Dr. diagnostic tool — Right Side View" },
+  { src: "/images/trailerdr-product-image.webp",          alt: "Trailer Dr. diagnostic tool: Front View" },
+  { src: "/images/product-spinner-v2/4J0A2941.webp",      alt: "Trailer Dr. diagnostic tool: Left Side View" },
+  { src: "/images/product-spinner-v2/4J0A2949.webp",      alt: "Trailer Dr. diagnostic tool: Back View" },
+  { src: "/images/product-spinner-v2/4J0A2957.webp",      alt: "Trailer Dr. diagnostic tool: Right Side View" },
   { src: "/images/standard-battery-powered-remote.webp",  alt: "Standard remote (included)" },
   { src: "/images/rechargable-remote-w-flashlight.webp",  alt: "Optional rechargeable remote with work light +$99" },
 ];
@@ -44,16 +44,18 @@ function Product() {
               Electrical &amp; Air Brake Trailer Diagnostic Tool
             </h1>
             <p className="product-page__description">
-              Compact, handle-equipped semi-trailer diagnostic tool for
-              one-person operation. Verify trailer lighting, air supply, and
-              brake activation from the rear of the trailer. No second person
-              or cab access needed.
+              Portable semi-trailer light and air brake tester built to handle
+              real shop conditions. Fully waterproof, 15.2 lbs, and built for
+              one-person operation. Verify lighting, air supply, and brake
+              activation from the rear of the trailer without a truck, cab
+              access, or a second person.
             </p>
             <ul className="product-page__highlights">
-              <li>Remote control of lights, air supply, and brakes</li>
-              <li>Waterproof, rugged NEMA-rated enclosure</li>
-              <li>15.2 lbs with built-in handle. Move between trailers in any shop or yard.</li>
-              <li>1-year warranty · 30-day trial (buyer covers return shipping)</li>
+              <li>Fully waterproof NEMA-rated enclosure, built for wet shops and outdoor use</li>
+              <li>One person does the work of two. No cab access, no second technician needed</li>
+              <li>Hangs from the trailer gladhand couplings during testing, keeping it positioned at the rear while you operate the remote</li>
+              <li>15.2 lbs with built-in handle. Move between trailers in any shop, fleet yard, or roadside call</li>
+              <li>1-year warranty · 30-day free trial (buyer covers return shipping)</li>
             </ul>
 
             <div className="product-page__addon">
@@ -83,7 +85,7 @@ function Product() {
                 <span className="material-symbols-outlined" aria-hidden="true">flag</span>
                 <div>
                   <strong>Made in the USA</strong>
-                  <p>Made in the USA.</p>
+                  <p>Ships free to anywhere in the contiguous USA.</p>
                 </div>
               </div>
             </div>
@@ -146,26 +148,28 @@ function Product() {
               <span className="material-symbols-outlined product-where-card__icon" aria-hidden="true">warehouse</span>
               <h3>Shop Floor</h3>
               <p>
-                Plug into shore power and run full electrical and air brake
-                diagnostics without moving the trailer or calling someone to
-                the cab.
+                Plug into shore power, hang Trailer Dr. from the gladhand
+                couplings, and run full electrical and air brake diagnostics
+                from the rear of the trailer with the remote. No moving the
+                trailer, no calling someone to the cab.
               </p>
             </div>
             <div className="product-where-card">
               <span className="material-symbols-outlined product-where-card__icon" aria-hidden="true">grid_view</span>
               <h3>Fleet Yard</h3>
               <p>
-                Walk the yard and test trailers in line. One technician can
-                work through an entire fleet independently, with no vehicle access
-                required.
+                Walk the yard and test trailers in line. One technician handles
+                fleet maintenance independently, with no vehicle access, no second
+                person, and no waiting.
               </p>
             </div>
             <div className="product-where-card">
               <span className="material-symbols-outlined product-where-card__icon" aria-hidden="true">add_road</span>
-              <h3>Field Calls &amp; Roadside</h3>
+              <h3>Field Calls &amp; Roadside Repair</h3>
               <p>
                 With a service vehicle providing 115V power and air, Trailer
-                Dr. handles breakdowns and field calls without needing a shop.
+                Dr. handles roadside trailer repairs and field calls without
+                needing a shop.
               </p>
             </div>
             <div className="product-where-card">
@@ -186,7 +190,7 @@ function Product() {
         <div className="container">
           <p className="section-label">How We Compare</p>
           <h2 className="section-title">
-            More Compact. More Powerful. More Flexible.
+            Trailer Dr. vs. Other Trailer Testers
           </h2>
           <p className="section-subtitle">
             Most trailer testers limit what you can do from the remote and
@@ -206,34 +210,29 @@ function Product() {
             </div>
             {[
               {
+                feature: "Waterproof",
+                ours: "NEMA 4/4X/6/6P-rated polycarbonate enclosure. Watertight against hose-directed water and submersion. Built for wet shops and outdoor use.",
+                theirs: "Standard enclosures with no waterproof rating. Water intrusion leads to shorts and unit failure.",
+              },
+              {
                 feature: "Remote control",
-                ours: "9-channel rechargeable remote. Every function at your fingertips from the rear of the trailer.",
-                theirs: "Limited remote channels. Not all functions accessible without returning to the box.",
+                ours: "9-channel rechargeable remote. All functions from the rear of the trailer with no need to return to the box.",
+                theirs: "Limited channels and manual interaction at the box to switch tests; not everything is available from the remote.",
               },
               {
-                feature: "Full remote operation",
-                ours: "All 9 functions operable from the remote. Never walk back to the box.",
-                theirs: "Requires manual interaction at the box to switch between test functions.",
+                feature: "Rechargeable remote",
+                ours: "Optional rechargeable remote with integrated work light available for +$99. Standard battery remote included.",
+                theirs: "Disposable battery remotes only. No rechargeable option available.",
               },
               {
-                feature: "Remote power",
-                ours: "Rechargeable. No batteries to replace.",
-                theirs: "Disposable battery remotes that need replacing in the field.",
-              },
-              {
-                feature: "Vehicle mounting",
-                ours: "Not required. Use anywhere with 115V power and an air supply.",
-                theirs: "Designed for permanent mounting in a service truck.",
+                feature: "Portability",
+                ours: "Hangs from the trailer gladhand couplings during use. No permanent mount required. Can also be installed on a service truck or cart for mobile operations.",
+                theirs: "Designed for fixed installation on a service truck or shop cart. Not practical to move between trailers or locations.",
               },
               {
                 feature: "Size & weight",
                 ours: "12 × 10 × 4 in, 15.2 lbs. Carry it between trailers by hand.",
                 theirs: "Larger, heavier units built for fixed shop or vehicle installation.",
-              },
-              {
-                feature: "Weatherproof",
-                ours: "Fully waterproof, NEMA-rated polycarbonate enclosure.",
-                theirs: "Standard enclosures with no weatherproof rating.",
               },
               {
                 feature: "ABS fault code reading",
@@ -261,8 +260,61 @@ function Product() {
         </div>
       </section>
 
-      {/* Capabilities Summary */}
+      {/* Proven in the Field */}
       <section className="section">
+        <div className="container">
+          <p className="section-label">Proven in the Field</p>
+          <h2 className="section-title">Built to Last Where Others Fail</h2>
+          <p className="section-subtitle">
+            Trailer Dr. is built for the conditions technicians actually work in: wet shops,
+            outdoor yards, and roadside calls. When other tools fail, Trailer Dr. keeps running.
+          </p>
+          <div className="product-proof">
+            <div className="product-proof__card">
+              <span className="material-symbols-outlined product-proof__card-icon" aria-hidden="true">water_drop</span>
+              <div className="product-proof__card-body">
+                <h3>NEMA-Rated for Wet Conditions</h3>
+                <p>
+                  Trailer Dr. carries NEMA ratings 1, 2, 3, 3R, 3S, 4, 4X, 6, 6P, 12, and 13,
+                  covering everything from dripping water to hose-down and standing water conditions.
+                  No other portable trailer tester matches this rating.
+                </p>
+              </div>
+            </div>
+            <div className="product-proof__card">
+              <span className="material-symbols-outlined product-proof__card-icon" aria-hidden="true">savings</span>
+              <div className="product-proof__card-body">
+                <h3>One Person. No Cab. No Wait.</h3>
+                <p>
+                  With full remote control from the rear of the trailer, one technician does work
+                  that used to require two. No running to the cab, no calling someone to the truck.
+                  The labor savings alone pay for the tool.
+                </p>
+              </div>
+            </div>
+            <div className="product-proof__card product-proof__card--story">
+              <div className="product-proof__story-header">
+                <span className="material-symbols-outlined product-proof__card-icon" aria-hidden="true">business</span>
+                <p className="product-proof__story-label">Customer Story</p>
+              </div>
+              <blockquote className="product-proof__quote">
+                A fleet maintenance operation was going through IPA trailer testers regularly.
+                Their shop floor collected water, and the units kept shorting out, leading to
+                frequent breakdowns, repairs, and replacement costs. They switched to Trailer Dr.
+                Within a year, they had purchased three units and retired every competitor
+                tool in the shop. Trailer Dr. is now the only tester they use across their
+                entire fleet.
+              </blockquote>
+              <p className="product-proof__story-attr">
+                Fleet maintenance company, USA
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities Summary */}
+      <section className="section section--muted-solid">
         <div className="container">
           <p className="section-label">Capabilities</p>
           <h2 className="section-title">What Trailer Dr. Tests</h2>
@@ -285,7 +337,7 @@ function Product() {
       </section>
 
       {/* Technical Specifications */}
-      <section className="section section--muted-solid">
+      <section className="section section--muted">
         <div className="container">
           <p className="section-label">Technical Specifications</p>
           <h2 className="section-title">Built to Perform</h2>
