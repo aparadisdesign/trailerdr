@@ -284,10 +284,12 @@ function About() {
           {/* IMAGE PLACEHOLDER: Interior of the Fort Kent workshop, or Bruce at a
               workbench assembling or repairing a unit. Should convey hands-on
               craftsmanship and the direct, personal nature of their support. */}
-          <div className="about-img-placeholder about-img-placeholder--landscape">
-            <span className="material-symbols-outlined" aria-hidden="true">build</span>
-            <p>Fort Kent, Maine</p>
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/town-of-fort-kent.webp"
+            alt="Town of Fort Kent, Maine — home of Trailer Dr."
+            className="about-img about-img--landscape"
+          />
         </div>
       </section>
 

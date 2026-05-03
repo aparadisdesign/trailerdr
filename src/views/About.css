@@ -110,6 +110,17 @@
   border-color: var(--color-border);
 }
 
+.about-img {
+  width: 100%;
+  border-radius: var(--radius-mixed);
+  object-fit: cover;
+}
+
+.about-img--landscape {
+  aspect-ratio: 4 / 3;
+  min-height: 280px;
+}
+
 /* ---- Stats Strip ---- */
 
 .about-stats-strip {
