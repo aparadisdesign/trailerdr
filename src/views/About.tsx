@@ -286,8 +286,8 @@ function About() {
               craftsmanship and the direct, personal nature of their support. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/town-of-fort-kent.webp"
-            alt="Town of Fort Kent, Maine — home of Trailer Dr."
+            src="/images/trailerdr-product-image.webp"
+            alt="Trailer Dr. portable electrical and air brake trailer diagnostic tool"
             className="about-img about-img--landscape"
           />
         </div>
