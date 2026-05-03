@@ -38,7 +38,7 @@ const contactSchema = {
       "name": "Trailer Dr.",
       "url": "https://www.thetrailerdr.com",
       "telephone": "+1-207-231-4967",
-      "email": "contact.trailerdr@gmail.com",
+      "email": "bruce.trailerdr@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Fort Kent",
@@ -49,7 +49,7 @@ const contactSchema = {
         {
           "@type": "ContactPoint",
           "telephone": "+1-207-231-4967",
-          "email": "contact.trailerdr@gmail.com",
+          "email": "bruce.trailerdr@gmail.com",
           "contactType": "sales",
           "areaServed": "US",
           "availableLanguage": "English",
@@ -57,7 +57,7 @@ const contactSchema = {
         {
           "@type": "ContactPoint",
           "telephone": "+1-207-231-4967",
-          "email": "contact.trailerdr@gmail.com",
+          "email": "bruce.trailerdr@gmail.com",
           "contactType": "customer support",
           "areaServed": "US",
           "availableLanguage": "English",

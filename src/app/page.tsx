@@ -30,7 +30,7 @@ const organizationSchema = {
         "url": "https://www.thetrailerdr.com/images/trailerdr-product-image.webp",
       },
       "telephone": "+1-207-231-4967",
-      "email": "contact.trailerdr@gmail.com",
+      "email": "bruce.trailerdr@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Fort Kent",

@@ -85,7 +85,7 @@ function Contact() {
             <div className="contact-details">
               <div className="contact-detail">
                 <h4>Email</h4>
-                <a href="mailto:contact.trailerdr@gmail.com">contact.trailerdr@gmail.com</a>
+                <a href="mailto:bruce.trailerdr@gmail.com">bruce.trailerdr@gmail.com</a>
               </div>
               <div className="contact-detail">
                 <h4>Phone</h4>
