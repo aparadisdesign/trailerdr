@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Home from "../views/Home";
 
 export const metadata: Metadata = {
-  title: "Trailer Dr. | One-Person Electrical & Air Brake Trailer Diagnostic Tool",
+  title: {
+    absolute:
+      "Trailer Dr. | One-Person Electrical & Air Brake Trailer Diagnostic Tool",
+  },
   description:
     "Trailer Dr. lets one technician test trailer lights, air supply, and brake activation from the rear of the trailer. No truck, no second person. Portable, waterproof, Made in the USA.",
   alternates: {

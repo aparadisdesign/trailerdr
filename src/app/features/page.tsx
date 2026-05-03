@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Features from "../../views/Features";
 
 export const metadata: Metadata = {
-  title: "Specs & Capabilities | Trailer Dr. Trailer Diagnostic Tool",
+  title: "Specs & Capabilities | Trailer Diagnostic Tool",
   description:
     "Full technical specifications for Trailer Dr.: 30A output, 15.2 lbs, waterproof NEMA-rated enclosure, 125 lb air output, ABS blink code reading, remote control of lights and brakes. Lightest and most compact in its class.",
   alternates: {
