@@ -37,7 +37,7 @@ const aboutSchema = {
       "name": "Trailer Dr.",
       "url": "https://www.thetrailerdr.com",
       "telephone": "+1-207-231-4967",
-      "email": "contact.trailerdr@gmail.com",
+      "email": "bruce.trailerdr@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Fort Kent",
