@@ -25,22 +25,6 @@ const REVIEWS = [
     text: "Great product, great for one man repairs and test on trailers. Remote controlled from under the trailer, back of trailer, or on top. Great for wiring failures.",
     author: "Jeff Blanchette",
   },
-  {
-    text: "Excellent tester! Very reliable and easy to use. Time saving device.",
-    author: "D D",
-  },
-  {
-    text: "Works very well. Had it for years, no issues. Would recommend to others.",
-    author: "Jr Theriault",
-  },
-  {
-    text: "Great product makes working on a trailer very efficient!",
-    author: "Nick Theriault",
-  },
-  {
-    text: "Use it everyday. Works awesome.",
-    author: "Troy",
-  },
 ];
 
 export default function ReviewsCarousel() {
