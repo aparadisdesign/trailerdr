@@ -154,6 +154,71 @@
   color: var(--color-accent);
 }
 
+/* Phone icon */
+.header__phone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s;
+  font-size: 0;
+}
+
+.header__phone .material-symbols-outlined {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.header__phone:hover {
+  color: var(--color-accent-on-dark);
+}
+
+.header--light .header__phone {
+  color: var(--color-text-light);
+}
+
+.header--light .header__phone:hover {
+  color: var(--color-accent);
+}
+
+.header--scrolled .header__phone {
+  color: var(--color-text-light);
+}
+
+.header--scrolled .header__phone:hover {
+  color: var(--color-accent);
+}
+
+.header__phone-tooltip {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 50%;
+  transform: translateX(50%);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 0.35rem 0.65rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.header--scrolled .header__phone-tooltip {
+  background: var(--color-primary);
+}
+
+.header__phone:hover .header__phone-tooltip {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .header__phone-tooltip {
+    display: none;
+  }
+}
+
 /* Hamburger */
 .header__toggle {
   display: none;
