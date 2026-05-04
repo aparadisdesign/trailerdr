@@ -42,6 +42,11 @@ const organizationSchema = {
       },
       "description":
         "Trailer Dr. makes portable electrical and air brake trailer diagnostic tools for fleets, repair shops, and mobile service operators across the USA.",
+      "sameAs": [
+        "https://www.youtube.com/@thetrailerdr",
+        "https://www.facebook.com/profile.php?id=100068934459035",
+        "https://www.google.com/maps/place/Trailer+Dr./@47.2456272,-68.5801316,17z/data=!4m8!3m7!1s0x4cbc51c081c63881:0x9760e7e967287ae1!8m2!3d47.2456272!4d-68.5775567!9m1!1b1!16s%2Fg%2F11ry610_lr",
+      ],
       "founder": {
         "@type": "Person",
         "name": "Bruce Theriault",

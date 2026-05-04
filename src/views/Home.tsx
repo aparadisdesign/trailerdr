@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProductSpinner from "../components/ProductSpinner";
+import ReviewsCarousel from "../components/ReviewsCarousel";
 import "./Home.css";
 
 function Home() {
@@ -211,24 +212,7 @@ function Home() {
         <div className="container">
           <p className="section-label">Trusted by Professionals</p>
           <h2 className="section-title">What Our Customers Say</h2>
-          <div className="reviews">
-            <div className="review">
-              <div className="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p className="review__text">
-                "Incredible build quality and saved us hours on every trailer
-                inspection. Worth every penny."
-              </p>
-              <p className="review__author">Jerrold Warne</p>
-            </div>
-            <div className="review">
-              <div className="review__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p className="review__text">
-                "Game changer for air brake diagnostics. One person can now do
-                what used to take two."
-              </p>
-              <p className="review__author">GBD Farms</p>
-            </div>
-          </div>
+          <ReviewsCarousel />
         </div>
       </section>
 

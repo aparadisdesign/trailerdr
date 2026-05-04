@@ -57,6 +57,23 @@
   color: var(--color-accent-on-dark);
 }
 
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.footer__social-link {
+  color: var(--color-text-inverse-muted);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.footer__social-link:hover {
+  color: var(--color-accent-on-dark);
+}
+
 .footer__bottom {
   max-width: var(--max-width);
   margin: 0 auto;
