@@ -54,9 +54,10 @@ function Footer() {
 
         <div className="footer__contact">
           <h4>Get in Touch</h4>
-          <a href="mailto:bruce.trailerdr@gmail.com">bruce.trailerdr@gmail.com</a>
-          <a href="tel:+12072314967">(207) 231-4967</a>
           <p>Fort Kent, Maine</p>
+          <a href="tel:+12072314967">(207) 231-4967</a>
+          <a href="mailto:bruce.trailerdr@gmail.com">Email Bruce directly: bruce.trailerdr@gmail.com</a>
+
         </div>
       </div>
 

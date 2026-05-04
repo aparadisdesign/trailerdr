@@ -81,6 +81,15 @@ function Header() {
             {navLink("/contact", "Contact")}
           </nav>
 
+          <a
+            href="tel:+12072314967"
+            className="header__phone"
+            aria-label="Call (207) 231-4967"
+          >
+            <span className="material-symbols-outlined" aria-hidden="true">call</span>
+            <span className="header__phone-tooltip">(207) 231-4967</span>
+          </a>
+
           <div className="header__cart">
             <PayPalCartButton />
           </div>
