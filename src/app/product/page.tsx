@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     "The most compact, most powerful trailer diagnostic tool. 30A output, 15.2 lbs, fully waterproof. One person operates from the rear of the trailer. No truck or cab access needed. 30-day free trial, 1-year warranty, made in the USA, free shipping.",
   alternates: {
-    canonical: "https://www.thetrailerdr.com/product",
+    canonical: "https://thetrailerdr.com/product",
   },
   openGraph: {
     title: "Buy Trailer Dr. | Portable Air Brake & Light Diagnostic Tool",
     description:
       "Test trailer lights, air supply, and brake activation without a truck. 15.2 lbs, NEMA-rated waterproof enclosure. $3,195 with free US shipping.",
-    url: "https://www.thetrailerdr.com/product",
+    url: "https://thetrailerdr.com/product",
     type: "website",
   },
 };
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "@id": "https://www.thetrailerdr.com/product#product",
+  "@id": "https://thetrailerdr.com/product#product",
   "name": "Trailer Dr. Electrical & Air Brake Trailer Diagnostic Tool",
   "description":
     "Portable one-person semi-trailer light and air brake tester. Verifies trailer lighting, air supply, and brake activation from the rear of the trailer without a truck or cab access. 30A output, 15.2 lbs, NEMA 4/4X/6/6P-rated waterproof polycarbonate enclosure.",
   "image": [
-    "https://www.thetrailerdr.com/images/trailerdr-product-image.webp",
-    "https://www.thetrailerdr.com/images/product-spinner-v2/4J0A2941.webp",
-    "https://www.thetrailerdr.com/images/product-spinner-v2/4J0A2949.webp",
-    "https://www.thetrailerdr.com/images/product-spinner-v2/4J0A2957.webp",
+    "https://thetrailerdr.com/images/trailerdr-product-image.webp",
+    "https://thetrailerdr.com/images/product-spinner-v2/4J0A2941.webp",
+    "https://thetrailerdr.com/images/product-spinner-v2/4J0A2949.webp",
+    "https://thetrailerdr.com/images/product-spinner-v2/4J0A2957.webp",
   ],
   "brand": {
     "@type": "Brand",
@@ -39,7 +39,7 @@ const productSchema = {
   },
   "manufacturer": {
     "@type": "Organization",
-    "@id": "https://www.thetrailerdr.com/#organization",
+    "@id": "https://thetrailerdr.com/#organization",
     "name": "Trailer Dr.",
   },
   "countryOfOrigin": "US",
@@ -105,10 +105,10 @@ const productSchema = {
     "price": "3195.00",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
-    "url": "https://www.thetrailerdr.com/product",
+    "url": "https://thetrailerdr.com/product",
     "seller": {
       "@type": "Organization",
-      "@id": "https://www.thetrailerdr.com/#organization",
+      "@id": "https://thetrailerdr.com/#organization",
       "name": "Trailer Dr.",
     },
     "hasMerchantReturnPolicy": {

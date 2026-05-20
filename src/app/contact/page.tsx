@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Speak directly with the people who build Trailer Dr. Schedule a demo, ask a question, or get support. Call (207) 231-4967 or send a message.",
   alternates: {
-    canonical: "https://www.thetrailerdr.com/contact",
+    canonical: "https://thetrailerdr.com/contact",
   },
   openGraph: {
     title: "Contact Trailer Dr. | Schedule a Demo",
     description:
       "Speak directly with the people who build Trailer Dr. Schedule a demo or ask a question.",
-    url: "https://www.thetrailerdr.com/contact",
+    url: "https://thetrailerdr.com/contact",
     type: "website",
   },
 };
@@ -23,20 +23,20 @@ const contactSchema = {
   "@graph": [
     {
       "@type": "ContactPage",
-      "@id": "https://www.thetrailerdr.com/contact#webpage",
-      "url": "https://www.thetrailerdr.com/contact",
+      "@id": "https://thetrailerdr.com/contact#webpage",
+      "url": "https://thetrailerdr.com/contact",
       "name": "Contact Trailer Dr.",
       "description":
         "Contact Trailer Dr. to schedule a demo, ask a technical question, or place an order. Reach the people who actually build the product.",
       "about": {
-        "@id": "https://www.thetrailerdr.com/#organization",
+        "@id": "https://thetrailerdr.com/#organization",
       },
     },
     {
       "@type": "Organization",
-      "@id": "https://www.thetrailerdr.com/#organization",
+      "@id": "https://thetrailerdr.com/#organization",
       "name": "Trailer Dr.",
-      "url": "https://www.thetrailerdr.com",
+      "url": "https://thetrailerdr.com",
       "telephone": "+1-207-231-4967",
       "email": "bruce.trailerdr@gmail.com",
       "address": {

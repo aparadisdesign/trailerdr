@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.thetrailerdr.com"),
+  metadataBase: new URL("https://thetrailerdr.com"),
   title: {
     default: "Trailer Dr. | Electrical & Air Brake Trailer Diagnostic Tool",
     template: "%s | Trailer Dr.",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     images: ["/images/trailerdr-product-image.webp"],
   },
   alternates: {
-    canonical: "https://www.thetrailerdr.com",
+    canonical: "https://thetrailerdr.com",
   },
   icons: {
     icon: [

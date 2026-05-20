@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Full technical specifications for Trailer Dr.: 30A output, 15.2 lbs, waterproof NEMA-rated enclosure, 125 lb air output, ABS blink code reading, remote control of lights and brakes. Lightest and most compact in its class.",
   alternates: {
-    canonical: "https://www.thetrailerdr.com/features",
+    canonical: "https://thetrailerdr.com/features",
   },
   openGraph: {
     title: "Specs & Capabilities | Trailer Dr.",
     description:
       "30A output, 15.2 lbs, NEMA waterproof, ABS blink codes, remote control of lights and brakes. Full specs for the Trailer Dr. trailer diagnostic tool.",
-    url: "https://www.thetrailerdr.com/features",
+    url: "https://thetrailerdr.com/features",
     type: "website",
   },
 };
@@ -20,16 +20,16 @@ export const metadata: Metadata = {
 const featuresSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "@id": "https://www.thetrailerdr.com/product#product",
+  "@id": "https://thetrailerdr.com/product#product",
   "name": "Trailer Dr. Electrical & Air Brake Trailer Diagnostic Tool",
-  "url": "https://www.thetrailerdr.com/product",
+  "url": "https://thetrailerdr.com/product",
   "brand": {
     "@type": "Brand",
     "name": "Trailer Dr.",
   },
   "manufacturer": {
     "@type": "Organization",
-    "@id": "https://www.thetrailerdr.com/#organization",
+    "@id": "https://thetrailerdr.com/#organization",
     "name": "Trailer Dr.",
   },
   "additionalProperty": [
