@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Trailer Dr. is designed and built in the USA by people who work in the trucking industry. Learn about the team behind the tool and why we built it.",
   alternates: {
-    canonical: "https://www.thetrailerdr.com/about",
+    canonical: "https://thetrailerdr.com/about",
   },
   openGraph: {
     title: "About Trailer Dr. | American-Made Trailer Diagnostic Tool",
     description:
       "Designed and built in the USA by people who work in the trucking industry.",
-    url: "https://www.thetrailerdr.com/about",
+    url: "https://thetrailerdr.com/about",
     type: "website",
   },
 };
@@ -22,20 +22,20 @@ const aboutSchema = {
   "@graph": [
     {
       "@type": "AboutPage",
-      "@id": "https://www.thetrailerdr.com/about#webpage",
-      "url": "https://www.thetrailerdr.com/about",
+      "@id": "https://thetrailerdr.com/about#webpage",
+      "url": "https://thetrailerdr.com/about",
       "name": "About Trailer Dr.",
       "description":
         "Trailer Dr. was founded by Bruce Theriault, an equipment professional with 30+ years in trucking and forestry. Built from firsthand experience maintaining semi-trailers in demanding environments.",
       "about": {
-        "@id": "https://www.thetrailerdr.com/#organization",
+        "@id": "https://thetrailerdr.com/#organization",
       },
     },
     {
       "@type": "Organization",
-      "@id": "https://www.thetrailerdr.com/#organization",
+      "@id": "https://thetrailerdr.com/#organization",
       "name": "Trailer Dr.",
-      "url": "https://www.thetrailerdr.com",
+      "url": "https://thetrailerdr.com",
       "telephone": "+1-207-231-4967",
       "email": "bruce.trailerdr@gmail.com",
       "address": {
@@ -63,7 +63,7 @@ const aboutSchema = {
           {
             "@type": "Offer",
             "itemOffered": {
-              "@id": "https://www.thetrailerdr.com/product#product",
+              "@id": "https://thetrailerdr.com/product#product",
             },
           },
         ],
