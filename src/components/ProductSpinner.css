@@ -25,6 +25,12 @@
   cursor: grabbing;
 }
 
+.product-spinner:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 3px;
+  border-radius: var(--radius-mixed);
+}
+
 .product-spinner__image {
   width: 100%;
   height: 100%;

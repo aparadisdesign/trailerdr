@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Inter } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import MaterialSymbolsLoader from "../components/MaterialSymbolsLoader";
 import "../index.css";
 import "../App.css";
 
@@ -60,13 +61,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-          rel="stylesheet"
-        />
-      </head>
       <body>
+        <MaterialSymbolsLoader />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-WS22492P"

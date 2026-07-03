@@ -1,94 +1,119 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "./ProductSpinner.css";
 
-// Static list of 360° spinner frames from public/images/product-spinner-v2/
 const SPINNER_IMAGES: string[] = Array.from(
   { length: 32 },
   (_, i) => `/images/product-spinner-v2/4J0A${2933 + i}.webp`
 );
 
+const COUNT = SPINNER_IMAGES.length;
+
 export default function ProductSpinner() {
-  const [index, setIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStartX, setDragStartX] = useState(0);
-  const [dragStartIndex, setDragStartIndex] = useState(0);
+  // React state only for things that require a re-render (happens once)
   const [hasInteracted, setHasInteracted] = useState(false);
 
-  const count = SPINNER_IMAGES.length;
-  const hasImages = count > 0;
+  // Refs for direct DOM manipulation during drag — no React re-renders
+  const containerRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const progressFillRef = useRef<HTMLDivElement>(null);
+  const progressBarRef = useRef<HTMLDivElement>(null);
 
-  const markInteracted = () => setHasInteracted(true);
+  const indexRef = useRef(0);
+  const isDraggingRef = useRef(false);
+  const dragStartXRef = useRef(0);
+  const dragStartIndexRef = useRef(0);
+  const hasInteractedRef = useRef(false);
+
+  // Preload and pre-decode all frames on mount so they're GPU-ready
+  useEffect(() => {
+    SPINNER_IMAGES.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.decode().catch(() => {});
+    });
+  }, []);
+
+  const updateFrame = useCallback((next: number) => {
+    indexRef.current = next;
+    if (imgRef.current) imgRef.current.src = SPINNER_IMAGES[next];
+    if (progressFillRef.current) {
+      progressFillRef.current.style.width = `${((next + 1) / COUNT) * 100}%`;
+    }
+    if (progressBarRef.current) {
+      progressBarRef.current.setAttribute("aria-valuenow", String(next + 1));
+    }
+  }, []);
+
+  const markInteracted = useCallback(() => {
+    if (hasInteractedRef.current) return;
+    hasInteractedRef.current = true;
+    setHasInteracted(true);
+  }, []);
 
   const goPrev = useCallback(() => {
     markInteracted();
-    setIndex((i) => (i - 1 + count) % count);
-  }, [count]);
+    updateFrame((indexRef.current - 1 + COUNT) % COUNT);
+  }, [markInteracted, updateFrame]);
 
   const goNext = useCallback(() => {
     markInteracted();
-    setIndex((i) => (i + 1) % count);
-  }, [count]);
+    updateFrame((indexRef.current + 1) % COUNT);
+  }, [markInteracted, updateFrame]);
 
-  const handlePointerDown = useCallback(
-    (e: React.PointerEvent) => {
-      if (!hasImages) return;
-      markInteracted();
-      setIsDragging(true);
-      setDragStartX(e.clientX);
-      setDragStartIndex(index);
-      (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
-    },
-    [hasImages, index]
-  );
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === "ArrowLeft") { e.preventDefault(); goPrev(); }
+    else if (e.key === "ArrowRight") { e.preventDefault(); goNext(); }
+  }, [goPrev, goNext]);
 
-  const handlePointerMove = useCallback(
-    (e: React.PointerEvent) => {
-      if (!isDragging || !hasImages) return;
-      const dx = dragStartX - e.clientX;
-      const delta = Math.round(dx / 18);
-      const next = (dragStartIndex + delta % count + count) % count;
-      setIndex(next);
-    },
-    [isDragging, hasImages, dragStartX, dragStartIndex, count]
-  );
+  const handlePointerDown = useCallback((e: React.PointerEvent) => {
+    markInteracted();
+    isDraggingRef.current = true;
+    dragStartXRef.current = e.clientX;
+    dragStartIndexRef.current = indexRef.current;
+    containerRef.current?.classList.add("product-spinner--dragging");
+    (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
+  }, [markInteracted]);
 
-  const handlePointerUp = useCallback(() => setIsDragging(false), []);
+  const handlePointerMove = useCallback((e: React.PointerEvent) => {
+    if (!isDraggingRef.current) return;
+    const dx = dragStartXRef.current - e.clientX;
+    const delta = Math.round(dx / 18);
+    const next = ((dragStartIndexRef.current + delta) % COUNT + COUNT) % COUNT;
+    updateFrame(next);
+  }, [updateFrame]);
 
-  if (!hasImages) {
-    return (
-      <div className="product-spinner product-spinner--empty">
-        <span>No spin images found.</span>
-      </div>
-    );
-  }
-
-  const progressPct = ((index + 1) / count) * 100;
+  const handlePointerUp = useCallback(() => {
+    isDraggingRef.current = false;
+    containerRef.current?.classList.remove("product-spinner--dragging");
+  }, []);
 
   return (
     <div
-      className={`product-spinner${isDragging ? " product-spinner--dragging" : ""}`}
+      ref={containerRef}
+      className="product-spinner"
+      tabIndex={0}
+      aria-label="Trailer Dr. 360° product view. Use left and right arrow keys to rotate."
+      onKeyDown={handleKeyDown}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerLeave={handlePointerUp}
       onPointerCancel={handlePointerUp}
     >
-      <div
-        className={`product-spinner__frame${index === 14 ? " product-spinner__frame--frame-15" : ""}`}
-      >
+      <div className="product-spinner__frame">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={SPINNER_IMAGES[index]}
-          alt={`Trailer Dr. interactive 360° product view`}
+          ref={imgRef}
+          src={SPINNER_IMAGES[0]}
+          alt="Trailer Dr. interactive 360° product view"
           className="product-spinner__image"
           draggable={false}
         />
       </div>
 
-      {/* Left / right arrows */}
-      <div className="product-spinner__controls" aria-hidden={!hasInteracted}>
+      <div className="product-spinner__controls">
         <button
           type="button"
           className="product-spinner__btn product-spinner__btn--prev"
@@ -107,11 +132,18 @@ export default function ProductSpinner() {
         </button>
       </div>
 
-      {/* Rotate badge pre-interaction, progress bar after */}
       <div className="product-spinner__footer">
         {hasInteracted ? (
-          <div className="product-spinner__progress" role="progressbar" aria-valuemin={1} aria-valuemax={count} aria-valuenow={index + 1} aria-label={`View ${index + 1} of ${count}`}>
-            <div className="product-spinner__progress-fill" style={{ width: `${progressPct}%` }} />
+          <div
+            ref={progressBarRef}
+            className="product-spinner__progress"
+            role="progressbar"
+            aria-valuemin={1}
+            aria-valuemax={COUNT}
+            aria-valuenow={1}
+            aria-label={`View 1 of ${COUNT}`}
+          >
+            <div ref={progressFillRef} className="product-spinner__progress-fill" style={{ width: `${(1 / COUNT) * 100}%` }} />
           </div>
         ) : (
           <span className="product-spinner__rotate-badge" aria-label="Drag to rotate">
