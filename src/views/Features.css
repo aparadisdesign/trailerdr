@@ -84,6 +84,28 @@
   color: var(--color-accent-aaa);
 }
 
+/* ---- How-To Videos ---- */
+
+.features-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.features-video h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.features-video p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.65;
+}
+
 /* ---- Built for the Field (cards) ---- */
 
 .features-field-grid {
@@ -302,6 +324,11 @@
 /* ---- Responsive ---- */
 
 @media (max-width: 900px) {
+  .features-videos-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
   .features-field-grid {
     grid-template-columns: repeat(2, 1fr);
   }

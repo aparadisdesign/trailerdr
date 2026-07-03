@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ProductSpinner from "../components/ProductSpinner";
 import ReviewsCarousel from "../components/ReviewsCarousel";
+import VideoEmbed from "../components/VideoEmbed";
 import "./Home.css";
 
 function Home() {
@@ -94,6 +95,30 @@ function Home() {
                 className="how-image"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Overview Video */}
+      <section className="section">
+        <div className="container home-video-grid">
+          <div className="home-video__media">
+            <VideoEmbed
+              youtubeId="Is3PYLdX4R4"
+              title="What Is Trailer Dr.? Portable Electrical & Air Brake Trailer Diagnostic Tool"
+            />
+          </div>
+          <div className="home-video__content">
+            <p className="section-label">See It in Action</p>
+            <h2 className="section-title">What Is Trailer Dr.?</h2>
+            <p>
+              See how Trailer Dr. tests lights, air supply, and brakes from a
+              single position at the rear of the trailer, with no laptop, app,
+              or second technician required.
+            </p>
+            <Link href="/features" className="btn btn--primary">
+              See Full Specs
+            </Link>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import VideoEmbed from "../components/VideoEmbed";
 import "./About.css";
 
 function About() {
@@ -84,14 +85,13 @@ function About() {
         </div>
       </section>
 
-      {/* Practical Approach */}
+      {/* Practical Approach + Founder Video */}
       <section className="section">
         <div className="container about-grid">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/standard-battery-powered-remote.webp"
-            alt="Trailer Dr. remote control tester in use at the rear of a trailer"
-            className="about-photo"
+          <VideoEmbed
+            youtubeId="KoIQd2e3e-c"
+            title="Trailer Dr. Product Walkthrough: Why We Built It This Way"
+            className="about-grid__video"
           />
           <div className="about-bio">
             <p className="section-label">Philosophy</p>
@@ -101,10 +101,10 @@ function About() {
             <p>
               Trailer Dr. focuses on the trailer systems that most often lead
               to inspection failures, downtime, and safety concerns. Rather
-              than adding layers of software or unnecessary complexity, the
-              product is designed to help technicians verify electrical and
-              air brake performance quickly and confidently, right where
-              problems occur.
+              than adding software layers or unnecessary complexity, the
+              product helps technicians verify electrical and air brake
+              performance quickly and confidently—right where problems
+              actually occur.
             </p>
             <div className="about-pullquote">
               <p>

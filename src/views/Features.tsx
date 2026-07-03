@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PayPalAddToCartButton } from "../components/PayPalCart";
+import VideoEmbed from "../components/VideoEmbed";
 import "./Features.css";
 
 const specs = [
@@ -84,6 +85,44 @@ function Features() {
                 <li>Brake activation and air brake response</li>
                 <li>One-person operation via manual controls or wireless remote</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How-To Videos */}
+      <section className="section">
+        <div className="container">
+          <p className="section-label">See It in Action</p>
+          <h2 className="section-title">Setup and Operation, Step by Step</h2>
+          <p className="section-subtitle">
+            Two short walkthroughs covering how to connect Trailer Dr. to a
+            trailer and how to run a full electrical and air brake test.
+          </p>
+          <div className="features-videos-grid">
+            <div className="features-video">
+              <VideoEmbed
+                youtubeId="zOUsDC3MOQU"
+                title="How to Hook Up Trailer Dr. to a Semi-Trailer (7-Way Connector, Step by Step)"
+              />
+              <h3>How to Hook Up Trailer Dr.</h3>
+              <p>
+                Connect the 7-way round pin connector, hang the unit from the
+                trailer's gladhand couplings, and get air and power running
+                before you test.
+              </p>
+            </div>
+            <div className="features-video">
+              <VideoEmbed
+                youtubeId="60ONWkng59A"
+                title="How to Operate Trailer Dr.: Testing Lights, Air, and Brakes Step by Step"
+              />
+              <h3>How to Operate Trailer Dr.</h3>
+              <p>
+                Activate lights, read ABS blink codes, supply air, and
+                trigger brake activation, using the manual controls or the
+                wireless remote.
+              </p>
             </div>
           </div>
         </div>

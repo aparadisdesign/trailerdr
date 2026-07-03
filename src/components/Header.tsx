@@ -1,22 +1,49 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PayPalCartButton } from "./PayPalCart";
 import "./Header.css";
 
+const ABOUT_DROPDOWN_PATHS = ["/about", "/resources", "/faq"];
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const pathname = usePathname();
   const lightHero = pathname === "/product";
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    setAboutOpen(false);
+    setMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!aboutOpen) return;
+    const onClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setAboutOpen(false);
+      }
+    };
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setAboutOpen(false);
+    };
+    document.addEventListener("mousedown", onClickOutside);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", onClickOutside);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [aboutOpen]);
 
   const logoSrc =
     scrolled || lightHero
@@ -75,7 +102,35 @@ function Header() {
 
           <nav className={`header__nav ${menuOpen ? "header__nav--open" : ""}`}>
             {navLink("/", "Home", true)}
-            {navLink("/about", "About")}
+
+            <div
+              className={`header__dropdown${ABOUT_DROPDOWN_PATHS.some((p) => pathname?.startsWith(p)) ? " active" : ""}${aboutOpen ? " header__dropdown--open" : ""}`}
+              ref={dropdownRef}
+            >
+              <span className="header__dropdown-row">
+                <Link
+                  href="/about"
+                  onClick={() => setMenuOpen(false)}
+                  aria-current={pathname === "/about" ? "page" : undefined}
+                >
+                  About
+                </Link>
+                <button
+                  type="button"
+                  className="header__dropdown-toggle"
+                  aria-expanded={aboutOpen}
+                  aria-label="Toggle About menu"
+                  onClick={() => setAboutOpen((open) => !open)}
+                >
+                  <span className="header__dropdown-caret" aria-hidden="true" />
+                </button>
+              </span>
+              <div className="header__submenu">
+                {navLink("/resources", "Resources")}
+                {navLink("/faq", "FAQs")}
+              </div>
+            </div>
+
             {navLink("/features", "Features & Specs")}
             {navLink("/product", "Buy")}
             {navLink("/contact", "Contact")}

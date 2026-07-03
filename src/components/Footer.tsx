@@ -47,6 +47,8 @@ function Footer() {
         <div className="footer__links">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
+          <Link href="/resources">Resources</Link>
+          <Link href="/faq">FAQs</Link>
           <Link href="/features">Features &amp; Specs</Link>
           <Link href="/product">Buy</Link>
           <Link href="/contact">Contact</Link>

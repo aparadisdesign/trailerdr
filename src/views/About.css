@@ -202,12 +202,10 @@
   align-items: center;
 }
 
-.about-photo {
+.about-grid__video {
   width: 100%;
-  height: auto;
   border-radius: var(--radius-mixed);
-  object-fit: cover;
-  aspect-ratio: 3 / 4;
+  overflow: hidden;
 }
 
 .about-bio__heading {
