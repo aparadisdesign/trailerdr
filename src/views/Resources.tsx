@@ -1,5 +1,5 @@
 import VideoEmbed from "../components/VideoEmbed";
-import { pressCoverage, resourceVideos } from "../data/resourcesData";
+import { pressCoverage, RESOURCE_VIDEOS } from "../data/resourcesData";
 import "./Resources.css";
 
 function Resources() {
@@ -53,7 +53,7 @@ function Resources() {
           <p className="section-label">Video Library</p>
           <h2 className="section-title">See Trailer Dr. in Action</h2>
           <div className="resources-videos-grid">
-            {resourceVideos.map((video) => (
+            {RESOURCE_VIDEOS.map((video) => (
               <div className="resources-video" key={video.youtubeId}>
                 <VideoEmbed
                   youtubeId={video.youtubeId}
