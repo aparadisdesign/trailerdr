@@ -1,6 +1,7 @@
 export interface ResourceVideo {
   youtubeId: string;
   title: string;
+  uploadDate: string;
 }
 
 export interface PressArticle {
@@ -15,20 +16,24 @@ export const RESOURCE_VIDEOS: ResourceVideo[] = [
     youtubeId: "Is3PYLdX4R4",
     title:
       "What Is Trailer Dr.? Portable Electrical & Air Brake Trailer Diagnostic Tool",
+    uploadDate: "2026-07-01",
   },
   {
     youtubeId: "KoIQd2e3e-c",
     title: "Trailer Dr. Product Walkthrough: Why We Built It This Way",
+    uploadDate: "2026-07-01",
   },
   {
     youtubeId: "zOUsDC3MOQU",
     title:
       "How to Hook Up Trailer Dr. to a Semi-Trailer (7-Way Connector, Step by Step)",
+    uploadDate: "2026-07-01",
   },
   {
     youtubeId: "60ONWkng59A",
     title:
       "How to Operate Trailer Dr.: Testing Lights, Air, and Brakes Step by Step",
+    uploadDate: "2026-07-01",
   },
 ];
 
@@ -49,6 +54,7 @@ const videoEntities = RESOURCE_VIDEOS.map((video) => ({
   "@id": videoSchemaId(video.youtubeId),
   name: video.title,
   description: video.title,
+  uploadDate: video.uploadDate,
   embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
   contentUrl: `https://www.youtube.com/watch?v=${video.youtubeId}`,
   thumbnailUrl: `https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`,

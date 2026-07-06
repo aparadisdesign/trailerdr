@@ -12,6 +12,11 @@ node_modules
 dist
 dist-ssr
 *.local
+tsconfig.tsbuildinfo
+
+# Local source media (not used in the site build)
+Media Assets/
+src/assets/videos/
 
 # Editor directories and files
 .vscode/*
