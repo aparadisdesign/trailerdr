@@ -269,6 +269,9 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+  }
+}
+
 /* Phone icon */
 .header__phone {
   position: relative;
