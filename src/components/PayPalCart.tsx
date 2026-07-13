@@ -1,6 +1,7 @@
 "use client";
 
 import { createElement, useEffect, useRef } from "react";
+import { trackEvent } from "../lib/gtag";
 
 declare global {
   interface Window {
@@ -53,7 +54,10 @@ export function PayPalAddToCartButton() {
   });
 
   return (
-    <div className="paypal-add-wrap">
+    <div
+      className="paypal-add-wrap"
+      onClickCapture={() => trackEvent("add_to_cart", { currency: "USD", value: 3195 })}
+    >
       {createElement("paypal-add-to-cart-button", { "data-id": ADD_TO_CART_PRODUCT_ID })}
     </div>
   );

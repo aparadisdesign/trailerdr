@@ -3,6 +3,7 @@
 import { useState, useRef, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { trackEvent } from "../lib/gtag";
 import "./Contact.css";
 
 const HCAPTCHA_SITE_KEY = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
@@ -54,6 +55,7 @@ function Contact() {
         formRef.current?.reset();
         captchaRef.current?.resetCaptcha();
         setCaptchaToken(null);
+        trackEvent("generate_lead", { form: "contact" });
       } else {
         setStatus("error");
         captchaRef.current?.resetCaptcha();
