@@ -86,10 +86,22 @@ export const productAggregateRating = {
   worstRating: "1",
 } as const;
 
+export const productImages = [
+  "https://thetrailerdr.com/images/trailerdr-product-image.webp",
+  "https://thetrailerdr.com/images/product-spinner-v2/4J0A2941.webp",
+  "https://thetrailerdr.com/images/product-spinner-v2/4J0A2949.webp",
+  "https://thetrailerdr.com/images/product-spinner-v2/4J0A2957.webp",
+] as const;
+
+export const productDescription =
+  "Portable one-person semi-trailer light and air brake tester. Verifies trailer lighting, air supply, and brake activation from the rear of the trailer without a truck or cab access. 30A output, 15.2 lbs, NEMA 4/4X/6/6P-rated waterproof polycarbonate enclosure.";
+
 export const productSchemaCore = {
   "@type": "Product",
   "@id": "https://thetrailerdr.com/product#product",
   name: "Trailer Dr. Electrical & Air Brake Trailer Diagnostic Tool",
+  description: productDescription,
+  image: productImages,
   url: "https://thetrailerdr.com/product",
   brand: {
     "@type": "Brand",
@@ -109,15 +121,9 @@ export const productPageSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   "@id": "https://thetrailerdr.com/product#product",
-  name: "Trailer Dr. Electrical & Air Brake Trailer Diagnostic Tool",
-  description:
-    "Portable one-person semi-trailer light and air brake tester. Verifies trailer lighting, air supply, and brake activation from the rear of the trailer without a truck or cab access. 30A output, 15.2 lbs, NEMA 4/4X/6/6P-rated waterproof polycarbonate enclosure.",
-  image: [
-    "https://thetrailerdr.com/images/trailerdr-product-image.webp",
-    "https://thetrailerdr.com/images/product-spinner-v2/4J0A2941.webp",
-    "https://thetrailerdr.com/images/product-spinner-v2/4J0A2949.webp",
-    "https://thetrailerdr.com/images/product-spinner-v2/4J0A2957.webp",
-  ],
+  name: productSchemaCore.name,
+  description: productSchemaCore.description,
+  image: productSchemaCore.image,
   brand: productSchemaCore.brand,
   manufacturer: productSchemaCore.manufacturer,
   countryOfOrigin: "US",
