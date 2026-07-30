@@ -12,7 +12,7 @@ function Home() {
         <div className="container">
           <div className="hero__content">
             <h1 className="hero__title">
-              One-Person Electrical &amp; Air Brake Trailer Diagnostics
+              One-Person Electrical &amp; Air Brake Semi-Trailer Diagnostics
             </h1>
             <p className="hero__subtitle">
               Verify trailer lighting, air supply, and brake activation quickly
@@ -20,13 +20,13 @@ function Home() {
               moving the trailer, without software.
             </p>
             <p className="hero__intro">
-              Trailer Dr. is a portable air brake and electrical trailer
-              diagnostic tool built for technicians who need fast, reliable
-              testing in shops, yards, and mobile roadside environments. The
-              smallest and most powerful tool in its class, Trailer Dr. delivers
-              30 amps of output in a 15.2 lb waterproof unit used by fleets,
-              repair shops, and mobile service operators across the United
-              States.
+              Trailer Dr. is a portable air brake and electrical diagnostic tool
+              for tractor trailers and commercial semi-trailers. Built for
+              technicians who need fast, reliable testing in shops, yards, and
+              mobile roadside environments. The smallest and most powerful tool
+              in its class, Trailer Dr. delivers 30 amps of output in a 15.2 lb
+              waterproof unit used by fleets, repair shops, and mobile service
+              operators across the United States.
             </p>
             <div className="hero__actions">
               <Link href="/product" className="btn btn--accent">
@@ -77,8 +77,8 @@ function Home() {
                   <div>
                     <h3>Confirm and clear</h3>
                     <p>
-                      Verify repairs on the spot before the trailer returns to
-                      service. Test once, confidently.
+                      Verify lights, air, and brakes on the spot before the
+                      trailer returns to service. Test once, confidently.
                     </p>
                   </div>
                 </li>
@@ -222,8 +222,8 @@ function Home() {
             <p>
               Brake systems are the #1 cause of out-of-service failures (41%),
               and lighting defects are #3 (14%). Trailer Dr. is built to test
-              both, so your crew can catch and confirm repairs before the
-              trailer ever faces an inspection.
+              both, so your crew can catch faults and confirm the fix before
+              the trailer ever faces an inspection.
             </p>
             <Link href="/features" className="btn btn--primary">
               See How It Helps

@@ -4,17 +4,17 @@ import Home from "../views/Home";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Trailer Dr. | One-Person Electrical & Air Brake Trailer Diagnostic Tool",
+      "Trailer Dr. | One-Person Semi-Trailer Electrical & Air Brake Diagnostic Tool",
   },
   description:
-    "Trailer Dr. lets one technician test trailer lights, air supply, and brake activation from the rear of the trailer. No truck, no second person. Portable, waterproof, Made in the USA.",
+    "Trailer Dr. lets one technician test lights, air supply, and brake activation on tractor trailers and commercial semi-trailers. No truck, no second person. Portable, waterproof, Made in the USA.",
   alternates: {
     canonical: "https://thetrailerdr.com",
   },
   openGraph: {
-    title: "Trailer Dr. | One-Person Trailer Diagnostic Tool",
+    title: "Trailer Dr. | One-Person Semi-Trailer Diagnostic Tool",
     description:
-      "Test trailer lights, air supply, and brake activation without a truck or a second person. Portable, waterproof, Made in the USA.",
+      "Test tractor trailer and semi-trailer lights, air supply, and brake activation without a truck or a second person. Portable, waterproof, Made in the USA.",
     url: "https://thetrailerdr.com",
     type: "website",
   },
@@ -41,7 +41,7 @@ const organizationSchema = {
         "addressCountry": "US",
       },
       "description":
-        "Trailer Dr. makes portable electrical and air brake trailer diagnostic tools for fleets, repair shops, and mobile service operators across the USA.",
+        "Trailer Dr. makes portable electrical and air brake diagnostic tools for tractor trailers and commercial semi-trailers. Built for fleets, repair shops, and mobile service operators across the USA.",
       "sameAs": [
         "https://www.youtube.com/@thetrailerdr",
         "https://www.facebook.com/profile.php?id=100068934459035",
@@ -62,7 +62,7 @@ const organizationSchema = {
       "url": "https://thetrailerdr.com",
       "name": "Trailer Dr.",
       "description":
-        "Portable electrical and air brake trailer diagnostic tool. One-person operation. No truck required.",
+        "Portable electrical and air brake diagnostic tool for tractor trailers and commercial semi-trailers. One-person operation. No truck required.",
       "publisher": {
         "@id": "https://thetrailerdr.com/#organization",
       },

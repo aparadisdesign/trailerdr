@@ -3,16 +3,16 @@ import FAQ from "../../views/FAQ";
 import { faqSections, slugify } from "../../data/faqData";
 
 export const metadata: Metadata = {
-  title: "FAQs | Trailer Dr. Electrical & Air Brake Diagnostic Tool",
+  title: "FAQs | Trailer Dr. Semi-Trailer Electrical & Air Brake Diagnostic Tool",
   description:
-    "Answers to common questions about Trailer Dr.: how it works, what it tests, specs, pricing, warranty, and how it compares to other portable trailer testers.",
+    "Answers to common questions about Trailer Dr.: how it works on tractor trailers and semi-trailers, what it tests, specs, pricing, warranty, and who it is for (commercial vs. consumer trailers).",
   alternates: {
     canonical: "https://thetrailerdr.com/faq",
   },
   openGraph: {
     title: "Trailer Dr. FAQs",
     description:
-      "How Trailer Dr. works, what it tests, specs, pricing, warranty, and comparisons to other portable trailer testers.",
+      "How Trailer Dr. works on commercial semi-trailers, what it tests, specs, pricing, warranty, and comparisons to other portable trailer testers.",
     url: "https://thetrailerdr.com/faq",
     type: "website",
   },

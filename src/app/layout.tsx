@@ -16,11 +16,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://thetrailerdr.com"),
   title: {
-    default: "Trailer Dr. | Electrical & Air Brake Trailer Diagnostic Tool",
+    default: "Trailer Dr. | Semi-Trailer Electrical & Air Brake Diagnostic Tool",
     template: "%s | Trailer Dr.",
   },
   description:
-    "Trailer Dr. is a portable electrical and air brake trailer diagnostic tool. Verify trailer lighting, air supply, and brake activation from the rear of the trailer — no truck or second person needed. Used by fleets, repair shops, and mobile service operators across the USA.",
+    "Trailer Dr. is a portable electrical and air brake diagnostic tool for tractor trailers and commercial semi-trailers. Verify lighting, air supply, and brake activation from the rear of the trailer — no truck or second person needed. Used by fleets, repair shops, and mobile service operators across the USA.",
   openGraph: {
     siteName: "Trailer Dr.",
     type: "website",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         url: "/images/trailerdr-product-image.webp",
         width: 1200,
         height: 630,
-        alt: "Trailer Dr. Electrical & Air Brake Trailer Diagnostic Tool",
+        alt: "Trailer Dr. Semi-Trailer Electrical & Air Brake Diagnostic Tool",
       },
     ],
   },

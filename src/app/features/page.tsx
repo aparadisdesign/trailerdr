@@ -3,16 +3,16 @@ import Features from "../../views/Features";
 import { productSchemaCore } from "../../data/productSchema";
 
 export const metadata: Metadata = {
-  title: "Specs & Capabilities | Trailer Diagnostic Tool",
+  title: "Specs & Capabilities | Semi-Trailer Diagnostic Tool",
   description:
-    "Full technical specifications for Trailer Dr.: 30A output, 15.2 lbs, waterproof NEMA-rated enclosure, 125 lb air output, ABS blink code reading, remote control of lights and brakes. Lightest and most compact in its class.",
+    "Full technical specifications for Trailer Dr., the commercial tractor trailer and semi-trailer diagnostic tool: 30A output, 15.2 lbs, waterproof NEMA-rated enclosure, 125 lb air output, ABS blink code reading, remote control of lights and brakes.",
   alternates: {
     canonical: "https://thetrailerdr.com/features",
   },
   openGraph: {
     title: "Specs & Capabilities | Trailer Dr.",
     description:
-      "30A output, 15.2 lbs, NEMA waterproof, ABS blink codes, remote control of lights and brakes. Full specs for the Trailer Dr. trailer diagnostic tool.",
+      "30A output, 15.2 lbs, NEMA waterproof, ABS blink codes, remote control of lights and brakes. Full specs for the Trailer Dr. semi-trailer diagnostic tool.",
     url: "https://thetrailerdr.com/features",
     type: "website",
   },

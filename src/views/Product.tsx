@@ -41,16 +41,17 @@ function Product() {
           <div className="product-page__info">
             <p className="section-label">Trailer Dr.</p>
             <h1 className="product-page__title">
-              Electrical &amp; Air Brake Trailer Diagnostic Tool
+              Electrical &amp; Air Brake Semi-Trailer Diagnostic Tool
             </h1>
             <p className="product-page__description">
-              Portable semi-trailer light and air brake tester built to handle
-              real shop conditions. Fully waterproof, 15.2 lbs, and built for
-              one-person operation. Verify lighting, air supply, and brake
-              activation from the rear of the trailer without a truck, cab
-              access, or a second person.
+              Portable light and air brake tester for tractor trailers and
+              commercial semi-trailers — not consumer trailers. Fully
+              waterproof, 15.2 lbs, and built for one-person operation. Verify
+              lighting, air supply, and brake activation from the rear of the
+              trailer without a truck, cab access, or a second person.
             </p>
             <ul className="product-page__highlights">
+              <li>Built for commercial trailers with 7-way round pin and gladhand couplings: tractor trailers, semis, dumps, lowboys, and flatbeds</li>
               <li>Fully waterproof NEMA-rated enclosure, built for wet shops and outdoor use</li>
               <li>One person does the work of two. No cab access, no second technician needed</li>
               <li>Hangs from the trailer gladhand couplings during testing, keeping it positioned at the rear while you operate the remote</li>
@@ -129,6 +130,10 @@ function Product() {
               <div className="product-page__add-to-cart">
                 <PayPalAddToCartButton />
               </div>
+              <p className="product-page__po-call">
+                Fleet or shop purchase order? Call Bruce at{" "}
+                <a href="tel:+12072314967">(207) 231-4967</a>
+              </p>
             </div>
           </div>
         </div>
@@ -165,11 +170,11 @@ function Product() {
             </div>
             <div className="product-where-card">
               <span className="material-symbols-outlined product-where-card__icon" aria-hidden="true">add_road</span>
-              <h3>Field Calls &amp; Roadside Repair</h3>
+              <h3>Field Calls &amp; Roadside</h3>
               <p>
                 With a service vehicle providing 115V power and air, Trailer
-                Dr. handles roadside trailer repairs and field calls without
-                needing a shop.
+                Dr. runs full electrical and air brake diagnostics on field
+                breakdowns and roadside calls — no shop required.
               </p>
             </div>
             <div className="product-where-card">
@@ -300,7 +305,7 @@ function Product() {
               <blockquote className="product-proof__quote">
                 A fleet maintenance operation was going through IPA trailer testers regularly.
                 Their shop floor collected water, and the units kept shorting out, leading to
-                frequent breakdowns, repairs, and replacement costs. They switched to Trailer Dr.
+                frequent failures, downtime, and replacement costs. They switched to Trailer Dr.
                 Within a year, they had purchased three units and retired every competitor
                 tool in the shop. Trailer Dr. is now the only tester they use across their
                 entire fleet.
@@ -364,9 +369,9 @@ function Product() {
             <Link href="/contact" className="btn btn--accent">
               Schedule a Demo
             </Link>
-            <Link href="/contact" className="btn btn--outline-light">
-              Contact Us
-            </Link>
+            <a href="tel:+12072314967" className="btn btn--outline-light">
+              Call (207) 231-4967
+            </a>
           </div>
         </div>
       </section>

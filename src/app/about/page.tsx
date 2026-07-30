@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import About from "../../views/About";
 
 export const metadata: Metadata = {
-  title: "About | American-Made Trailer Diagnostic Tool",
+  title: "About | American-Made Semi-Trailer Diagnostic Tool",
   description:
-    "Trailer Dr. is designed and built in the USA by people who work in the trucking industry. Learn about the team behind the tool and why we built it.",
+    "Trailer Dr. is designed and built in the USA for commercial tractor trailers and semi-trailers. Learn about the team behind the tool and why we built it.",
   alternates: {
     canonical: "https://thetrailerdr.com/about",
   },
   openGraph: {
-    title: "About Trailer Dr. | American-Made Trailer Diagnostic Tool",
+    title: "About Trailer Dr. | American-Made Semi-Trailer Diagnostic Tool",
     description:
-      "Designed and built in the USA by people who work in the trucking industry.",
+      "Designed and built in the USA for commercial tractor trailer and semi-trailer diagnostics.",
     url: "https://thetrailerdr.com/about",
     type: "website",
   },
@@ -51,7 +51,7 @@ const aboutSchema = {
           "Equipment professional with 30+ years working hands-on with semi-trucks, trailers, and heavy equipment in the trucking and forestry industries.",
       },
       "description":
-        "Trailer Dr. designs and builds portable electrical and air brake trailer diagnostic tools in the USA. Built for fleets, repair shops, and mobile service operators nationwide.",
+        "Trailer Dr. designs and builds portable electrical and air brake diagnostic tools for tractor trailers and commercial semi-trailers in the USA. Built for fleets, repair shops, and mobile service operators nationwide.",
       "areaServed": {
         "@type": "Country",
         "name": "United States",

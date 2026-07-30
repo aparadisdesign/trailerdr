@@ -15,8 +15,9 @@ function Footer() {
             />
           </Link>
           <p className="footer__tagline">
-            Portable electrical and air brake trailer diagnostic tool for
-            fleets, repair shops, and mobile service operators across the USA.
+            Portable electrical and air brake diagnostic tool for tractor
+            trailers and commercial semi-trailers. Built for fleets, repair
+            shops, and mobile service operators across the USA.
           </p>
           <div className="footer__socials">
             <a
@@ -50,7 +51,7 @@ function Footer() {
           <Link href="/resources">Resources</Link>
           <Link href="/faq">FAQs</Link>
           <Link href="/features">Features &amp; Specs</Link>
-          <Link href="/product">Buy</Link>
+          <Link href="/product">Buy the Tester</Link>
           <Link href="/contact">Contact</Link>
         </div>
 

@@ -27,7 +27,12 @@ export const faqSections: FaqSection[] = [
       {
         question: "Who is Trailer Dr. for?",
         answer:
-          "Trailer Dr. is for fleets, repair shops, mobile service operators, and owner-operators who run PM inspections and repairs on commercial trailers. If the work involves tractor trailers, semi-trailers, dump trailers, lowboys, flatbeds, or any trailer with a 7-way round pin connector, this tool was built for the way that work actually happens. Built for shop, yard, and roadside.",
+          "Trailer Dr. is for fleets, repair shops, mobile service operators, and owner-operators who run PM inspections and electrical and air brake diagnostics on commercial trailers. If the work involves tractor trailers, semi-trailers, dump trailers, lowboys, flatbeds, or any commercial trailer with a 7-way round pin connector and gladhand air couplings, this tool was built for the way that work actually happens. Built for shop, yard, and roadside — not for consumer trailers.",
+      },
+      {
+        question: "Does Trailer Dr. work on consumer trailers?",
+        answer:
+          "No. Trailer Dr. is built for commercial tractor trailers and semi-trailers. It connects through a 7-way round pin receptacle and gladhand air couplings — the standard on fleet and heavy-haul trailers. Consumer trailers typically use different connectors and do not have commercial air brake systems, so they are outside what this tool is built to test.",
       },
       {
         question: "Who invented Trailer Dr.?",
@@ -63,7 +68,7 @@ export const faqSections: FaqSection[] = [
       {
         question: "What types of trailer connectors does Trailer Dr. work with?",
         answer:
-          "Trailer Dr. ships with a 7-way round pin connector, the industry standard for commercial semi-trailers in North America. For trailers with 7-way flat (spade), 6-way round, or 4/5 pin connectors, standard adapter cables make it compatible. Most fleets running tractor trailers already have these adapters in the shop.",
+          "Trailer Dr. ships with a 7-way round pin connector, the industry standard for commercial semi-trailers in North America. For commercial trailers with 7-way flat (spade), 6-way round, or 4/5 pin connectors, standard adapter cables make it compatible. Most fleets running tractor trailers already have these adapters in the shop. These adapters are for commercial connector variants — not consumer trailers.",
       },
       {
         question: "Does Trailer Dr. require an app, tablet, or Bluetooth?",
@@ -99,7 +104,7 @@ export const faqSections: FaqSection[] = [
       {
         question: "Will Trailer Dr. work with all trailer brands?",
         answer:
-          "Yes. The 7-way round pin connector is the industry standard for commercial trailers in North America, and ABS blink codes are the universal protocol for PLC ABS systems. If a trailer uses both, Trailer Dr. will work on it regardless of brand.",
+          "Yes. The 7-way round pin connector is the industry standard for commercial trailers in North America, and ABS blink codes are the universal protocol for PLC ABS systems. If a commercial trailer uses both, Trailer Dr. will work on it regardless of brand. That means tractor trailers, semis, dumps, lowboys, and flatbeds — not consumer trailers.",
       },
       {
         question: "Can Trailer Dr. test trailer lights only, or does it do air brakes too?",
@@ -241,9 +246,9 @@ export const faqSections: FaqSection[] = [
           "Yes. Trailer Dr. tests the systems that DOT and CVSA inspectors check most often, including brake activation, air supply, ABS function, and trailer lighting. Verifying these systems before the trailer leaves the yard helps fleets avoid out-of-service violations and roadside delays.",
       },
       {
-        question: "Can Trailer Dr. be used for roadside repairs?",
+        question: "Can Trailer Dr. be used for roadside diagnostics?",
         answer:
-          "Yes. With a service truck supplying 115V power and shop air, Trailer Dr. handles roadside breakdowns and field calls the same way it handles shop work. The waterproof rating means it can be used in rain or wet conditions without concern for the unit.",
+          "Yes. With a service truck supplying 115V power and shop air, Trailer Dr. runs the same electrical and air brake tests on field calls and roadside breakdowns that it runs in the shop. The waterproof rating means it can be used in rain or wet conditions without concern for the unit.",
       },
       {
         question: "Can Trailer Dr. be mounted in a service truck?",

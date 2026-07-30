@@ -27,11 +27,11 @@ function Features() {
         <div className="container features-hero">
           <div className="features-hero__content">
             <p className="section-label">Features &amp; Specs</p>
-            <h1 className="section-title">Electrical and Air Brake Diagnostic Tool</h1>
+            <h1 className="section-title">Electrical and Air Brake Semi-Trailer Diagnostic Tool</h1>
             <p className="section-subtitle">
-              Trailer Dr. is designed to help technicians quickly verify
-              trailer lighting, air supply, and brake activation from a
-              single position at the rear of the trailer.
+              Trailer Dr. helps technicians quickly verify lighting, air supply,
+              and brake activation on tractor trailers and commercial
+              semi-trailers — from a single position at the rear of the trailer.
             </p>
             <p>
               Built for one-person operation, Trailer Dr. eliminates the need
@@ -41,9 +41,10 @@ function Features() {
               repeat inspections, and downtime.
             </p>
             <p>
-              Used by fleets, repair shops, and mobile service operators
-              across the United States. The most compact, most powerful, and
-              most rugged package in its class.
+              Designed for commercial fleets and shops working tractor trailers,
+              semis, dumps, lowboys, and flatbeds — not consumer trailers. Used
+              by fleets, repair shops, and mobile service operators across the
+              United States.
             </p>
           </div>
           <div className="features-hero__visual">
@@ -237,8 +238,8 @@ function Features() {
               <h3>Field Calls &amp; Roadside</h3>
               <p>
                 With a service vehicle supplying 115V power and air, Trailer
-                Dr. handles field breakdowns and roadside calls without a shop
-                in sight.
+                Dr. runs full electrical and air brake diagnostics on field
+                calls and roadside breakdowns — no shop required.
               </p>
             </div>
           </div>

@@ -94,15 +94,16 @@ export const productImages = [
 ] as const;
 
 export const productDescription =
-  "Portable one-person semi-trailer light and air brake tester. Verifies trailer lighting, air supply, and brake activation from the rear of the trailer without a truck or cab access. 30A output, 15.2 lbs, NEMA 4/4X/6/6P-rated waterproof polycarbonate enclosure.";
+  "Portable one-person diagnostic tool for tractor trailers and commercial semi-trailers. Verifies lighting, air supply, and brake activation from the rear of the trailer without a truck or cab access. Built for commercial trailers, not consumer trailers. 30A output, 15.2 lbs, NEMA 4/4X/6/6P-rated waterproof polycarbonate enclosure.";
 
 export const productSchemaCore = {
   "@type": "Product",
   "@id": "https://thetrailerdr.com/product#product",
-  name: "Trailer Dr. Electrical & Air Brake Trailer Diagnostic Tool",
+  name: "Trailer Dr. Semi-Trailer Electrical & Air Brake Diagnostic Tool",
   description: productDescription,
   image: productImages,
   url: "https://thetrailerdr.com/product",
+  category: "Commercial Semi-Trailer Diagnostic Tool",
   brand: {
     "@type": "Brand",
     name: "Trailer Dr.",
@@ -124,6 +125,7 @@ export const productPageSchema = {
   name: productSchemaCore.name,
   description: productSchemaCore.description,
   image: productSchemaCore.image,
+  category: productSchemaCore.category,
   brand: productSchemaCore.brand,
   manufacturer: productSchemaCore.manufacturer,
   countryOfOrigin: "US",

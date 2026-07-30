@@ -132,7 +132,7 @@ function Header() {
             </div>
 
             {navLink("/features", "Features & Specs")}
-            {navLink("/product", "Buy")}
+            {navLink("/product", "Buy the Tester")}
             {navLink("/contact", "Contact")}
           </nav>
 

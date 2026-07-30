@@ -159,6 +159,25 @@
   width: 100%;
 }
 
+.product-page__po-call {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.product-page__po-call a {
+  color: var(--color-accent-aaa);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.product-page__po-call a:hover {
+  color: var(--color-text);
+}
+
 /* ---- Add-On Box ---- */
 
 .product-page__addon {
