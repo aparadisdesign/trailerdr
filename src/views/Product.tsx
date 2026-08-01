@@ -165,11 +165,11 @@ function Product() {
             </div>
             <div className="product-where-card">
               <span className="material-symbols-outlined product-where-card__icon" aria-hidden="true">add_road</span>
-              <h3>Field Calls &amp; Roadside Repair</h3>
+              <h3>Field Calls &amp; Roadside Diagnostics</h3>
               <p>
                 With a service vehicle providing 115V power and air, Trailer
-                Dr. handles roadside trailer repairs and field calls without
-                needing a shop.
+                Dr. runs full electrical and air brake diagnostics on field
+                calls and roadside breakdowns — no shop required.
               </p>
             </div>
             <div className="product-where-card">
