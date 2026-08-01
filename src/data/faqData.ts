@@ -161,7 +161,7 @@ export const faqSections: FaqSection[] = [
       {
         question: "How much does Trailer Dr. cost?",
         answer:
-          "Trailer Dr. is $3,195. That price includes free shipping anywhere in the contiguous United States. An optional rechargeable remote with an integrated work light is available for an additional $99.",
+          "Trailer Dr. is $3,195. That price includes free shipping anywhere in the contiguous United States and one standard wireless remote. An optional rechargeable remote with an integrated work light is +$99 when you upgrade at checkout with a new unit ($3,294 total), or $130 when bought separately as an extra or replacement. It includes a wall plug-in charger and pairing instructions.",
       },
       {
         question: "Does Trailer Dr. offer a free trial?",
@@ -176,7 +176,7 @@ export const faqSections: FaqSection[] = [
       {
         question: "What is included when I buy Trailer Dr.?",
         answer:
-          "Every Trailer Dr. ships with the diagnostic unit, the standard battery-powered wireless remote, supply and control air hoses with gladhand couplings, the 7-way cable, and free shipping to the contiguous USA. The optional rechargeable remote with work light is available for an additional $99.",
+          "Every Trailer Dr. ships with the diagnostic unit, one standard battery-powered wireless remote, supply and control air hoses with gladhand couplings, the 7-way cable, and free shipping to the contiguous USA. The rechargeable remote with work light can be added as a +$99 upgrade when you buy a new unit, or purchased separately for $130 as an extra or replacement. Extra remotes must be paired with your unit; pairing instructions and a wall plug-in charger are included.",
       },
       {
         question: "How do I buy Trailer Dr.?",

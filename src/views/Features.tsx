@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { PayPalAddToCartButton } from "../components/PayPalCart";
+import {
+  PayPalAddToCartButton,
+  PAYPAL_REMOTE_PRODUCT_ID,
+} from "../components/PayPalCart";
 import VideoEmbed from "../components/VideoEmbed";
 import "./Features.css";
 
@@ -12,7 +15,7 @@ const specs = [
   { label: "Air Input", value: "125 lbs max air output (self-regulated)" },
   { label: "Connection", value: "7 Way Round Pin" },
   { label: "Controls", value: "Manual & Remote" },
-  { label: "Remote Batteries", value: "A23 12V Alkaline (standard); optional rechargeable remote with work light +$99" },
+  { label: "Remote Batteries", value: "A23 12V Alkaline (standard); optional rechargeable remote with work light +$99 with unit or $130 separately" },
   { label: "Weight", value: "15.2 lbs, lightest in its class" },
   { label: "Dimensions", value: "12 x 10 x 4 in (H x W x D), smallest in its class" },
   { label: "Materials", value: "NEMA 1/2/3/3R/3S/4/4X/6/6P/12/13 Polycarbonate" },
@@ -183,17 +186,30 @@ function Features() {
               className="features-remote__image"
             />
             <div className="features-remote__content">
-              <p className="section-label">Optional Upgrade</p>
+              <p className="section-label">Optional Extra or Replacement</p>
               <h2 className="section-title">Rechargeable Remote with Work Light</h2>
               <p>
-                For technicians working in low-visibility conditions, the
-                optional rechargeable remote adds an integrated work light,
-                keeping both hands free and both eyes on the trailer.
+                Every Trailer Dr. ships with one standard wireless remote. For
+                low-visibility work, or as a spare, the rechargeable remote adds
+                an integrated work light so you keep both hands free and both
+                eyes on the trailer.
               </p>
-              <p className="features-remote__price">+$99</p>
-              <Link href="/contact" className="btn btn--primary">
-                Ask About This Upgrade
-              </Link>
+              <p>
+                Upgrade when you buy a new unit for +$99 (choose it in Add to
+                Cart on the product page). Bought separately as an extra or
+                replacement: $130. Remotes must be paired with your unit —
+                pairing instructions and a wall plug-in charger are included.
+              </p>
+              <p className="features-remote__price">$130</p>
+              <p className="features-remote__price-note">
+                Separately · +$99 upgrade with a new unit
+              </p>
+              <div className="features-remote__cart">
+                <PayPalAddToCartButton
+                  productId={PAYPAL_REMOTE_PRODUCT_ID}
+                  value={130}
+                />
+              </div>
             </div>
           </div>
         </div>

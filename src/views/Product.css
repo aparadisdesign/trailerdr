@@ -208,6 +208,15 @@
 .product-page__addon-note {
   font-size: 0.8rem !important;
   opacity: 0.7;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.75rem !important;
+  line-height: 1.5;
+}
+
+.product-page__addon-cart {
+  margin-top: 0.75rem;
+  min-width: 0;
+  width: 100%;
 }
 
 /* ---- Meta Items (Warranty / Trial / Origin) ---- */
@@ -667,7 +676,6 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-
 /* ---- Responsive ---- */
 
 @media (max-width: 640px) {
@@ -675,3 +683,4 @@
     grid-template-columns: 1fr;
   }
 }
+

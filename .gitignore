@@ -28,3 +28,9 @@ src/assets/videos/
 *.njsproj
 *.sln
 *.sw?
+
+# Impeccable (local design tooling)
+.impeccable/
+.github/hooks/impeccable.json
+PRODUCT.md
+DESIGN.md

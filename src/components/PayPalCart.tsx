@@ -12,7 +12,10 @@ declare global {
   }
 }
 
-const ADD_TO_CART_PRODUCT_ID = "WFNZ67AZUTRHY";
+/** Trailer Dr. diagnostic unit — shared PayPal cart product */
+export const PAYPAL_UNIT_PRODUCT_ID = "WFNZ67AZUTRHY";
+/** Standalone extra/replacement rechargeable remote ($130; +$99 upgrade is a unit checkout option) */
+export const PAYPAL_REMOTE_PRODUCT_ID = "PBRRKVWHV5LQ8";
 
 function usePayPalInit(initFn: () => void) {
   const initRef = useRef(false);
@@ -48,17 +51,25 @@ export function PayPalCartButton() {
   );
 }
 
-export function PayPalAddToCartButton() {
+type PayPalAddToCartButtonProps = {
+  productId?: string;
+  value?: number;
+};
+
+export function PayPalAddToCartButton({
+  productId = PAYPAL_UNIT_PRODUCT_ID,
+  value = 3195,
+}: PayPalAddToCartButtonProps) {
   usePayPalInit(() => {
-    window.cartPaypal?.AddToCart({ id: ADD_TO_CART_PRODUCT_ID });
+    window.cartPaypal?.AddToCart({ id: productId });
   });
 
   return (
     <div
       className="paypal-add-wrap"
-      onClickCapture={() => trackEvent("add_to_cart", { currency: "USD", value: 3195 })}
+      onClickCapture={() => trackEvent("add_to_cart", { currency: "USD", value })}
     >
-      {createElement("paypal-add-to-cart-button", { "data-id": ADD_TO_CART_PRODUCT_ID })}
+      {createElement("paypal-add-to-cart-button", { "data-id": productId })}
     </div>
   );
 }

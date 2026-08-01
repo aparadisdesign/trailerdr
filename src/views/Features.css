@@ -182,7 +182,18 @@
   font-size: 2rem;
   font-weight: 900;
   color: var(--color-accent-aaa) !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.features-remote__price-note {
+  font-size: 0.9rem !important;
+  color: var(--color-text-light) !important;
   margin-bottom: 1.5rem !important;
+}
+
+.features-remote__cart {
+  min-width: 0;
+  max-width: 20rem;
 }
 
 /* ---- Where It Works ---- */
