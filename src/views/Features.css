@@ -161,15 +161,16 @@
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 4rem;
-  align-items: center;
+  align-items: stretch;
 }
 
 .features-remote__image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  min-height: 22rem;
   border-radius: var(--radius-mixed);
   object-fit: cover;
-  aspect-ratio: 4 / 3;
+  object-position: right center;
 }
 
 .features-remote__content p {
@@ -189,11 +190,6 @@
   font-size: 0.9rem !important;
   color: var(--color-text-light) !important;
   margin-bottom: 1.5rem !important;
-}
-
-.features-remote__cart {
-  min-width: 0;
-  max-width: 20rem;
 }
 
 /* ---- Where It Works ---- */
@@ -347,6 +343,12 @@
   .features-remote {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .features-remote__image {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    max-height: 28rem;
   }
 
   .features-price {

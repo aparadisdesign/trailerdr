@@ -86,16 +86,22 @@ function Product() {
               </div>
             </div>
 
-            <div className="product-page__specs-link-container">
-              <p className="product-page__specs-link-label">Not sure about it yet? See the full specifications and capabilities or schedule a demo and see it in action.</p>
-              <div className="product-page__specs-link-buttons">
-                <Link href="/features" className="btn btn--outline">
-                  View Full Specs
-                </Link>
-                <Link href="/contact?message=Hi%2C%0A%0AI+would+like+to+schedule+a+demo+of+your+Trailer+Dr.+Trailer+Tester..." className="btn btn--accent">
-                  Schedule a Demo
-                </Link>
-              </div>
+            {/* Capabilities */}
+            <div className="product-page__capabilities">
+              <p className="section-label">Capabilities</p>
+              <h2 className="section-title">What Trailer Dr. Tests</h2>
+              <ul className="product-capabilities">
+                <li>Brake, turn, running, and marker lights</li>
+                <li>Electrical connections and wiring faults</li>
+                <li>
+                  ABS fault code reading via industry-standard blink codes.
+                  Works on all major trailer brands. No software, no
+                  subscriptions, no proprietary dongles required.
+                </li>
+                <li>Air supply to the trailer (125 lb max, self-regulated)</li>
+                <li>Air leaks</li>
+                <li>Brake activation and air brake response</li>
+              </ul>
             </div>
           </div>
 
@@ -151,8 +157,29 @@ function Product() {
         </div>
       </section>
 
+      {/* Soft mid-page CTA — secondary to purchase */}
+      <section className="product-soft-cta" aria-label="Learn more or schedule a demo">
+        <div className="container product-soft-cta__inner">
+          <p className="product-soft-cta__copy">
+            Not sure about it yet? See the full specifications and capabilities
+            or schedule a demo and see it in action.
+          </p>
+          <div className="product-soft-cta__actions">
+            <Link href="/features" className="btn btn--outline">
+              View Full Specs
+            </Link>
+            <Link
+              href="/contact?message=Hi%2C%0A%0AI+would+like+to+schedule+a+demo+of+your+Trailer+Dr.+Trailer+Tester..."
+              className="btn btn--primary"
+            >
+              Schedule a Demo
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Where It Works */}
-      <section className="section">
+      <section className="section product-where">
         <div className="container">
           <p className="section-label">Deployment</p>
           <h2 className="section-title">Works Wherever You Work</h2>
@@ -327,29 +354,6 @@ function Product() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Capabilities Summary */}
-      <section className="section section--muted-solid">
-        <div className="container">
-          <p className="section-label">Capabilities</p>
-          <h2 className="section-title">What Trailer Dr. Tests</h2>
-          <ul className="product-capabilities">
-            <li>Brake, turn, running, and marker lights</li>
-            <li>Electrical connections and wiring faults</li>
-            <li>
-              ABS fault code reading via industry-standard blink codes.
-              Works on all major trailer brands. No software, no
-              subscriptions, no proprietary dongles required.
-            </li>
-            <li>Air supply to the trailer (125 lb max, self-regulated)</li>
-            <li>Air leaks</li>
-            <li>Brake activation and air brake response</li>
-          </ul>
-          <Link href="/features" className="btn btn--primary product-capabilities__link">
-            View Full Specs &amp; Capabilities
-          </Link>
         </div>
       </section>
 

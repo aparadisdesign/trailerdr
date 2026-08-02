@@ -40,6 +40,42 @@ main {
   background: var(--color-bg-muted);
 }
 
+/*
+  Even section rhythm: same-surface stacks were doubling 5rem+5rem into a
+  large empty gap (especially consecutive paper sections with no color break).
+  Keep one section's worth of space between content blocks.
+*/
+.section:not(
+  .section--dark,
+  .section--muted,
+  .section--muted-solid,
+  .section--page-hero,
+  .section--product-hero
+) + .section:not(
+  .section--dark,
+  .section--muted,
+  .section--muted-solid,
+  .section--page-hero,
+  .section--product-hero
+) {
+  padding-top: 0;
+}
+
+/* Muted wash fades into paper — following paper section is effectively continuous */
+.section--muted + .section:not(
+  .section--dark,
+  .section--muted,
+  .section--muted-solid,
+  .section--page-hero,
+  .section--product-hero
+) {
+  padding-top: 0;
+}
+
+.section--dark + .section--dark {
+  padding-top: 0;
+}
+
 /* Product page: light hero (no dark background) */
 .section.section--product-hero {
   background: var(--color-bg);

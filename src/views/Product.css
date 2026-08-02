@@ -255,30 +255,45 @@
   margin: 0;
 }
 
-/* ---- Specs / CTA Links ---- */
+/* ---- Soft mid-page CTA ---- */
 
-.product-page__specs-link-container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  border-top: 1px solid var(--color-border);
-  padding-top: 1.25rem;
+.product-soft-cta {
+  background: var(--color-bg-muted);
+  padding: 1.75rem 1.5rem;
 }
 
-.product-page__specs-link-buttons {
+.product-soft-cta__inner {
   display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
 }
 
-.product-page__specs-link-label {
-  font-size: 0.825rem;
+.product-soft-cta__copy {
+  margin: 0;
+  flex: 1 1 18rem;
+  max-width: 42rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--color-text-light);
-  margin: 0 0 0.25rem;
-  line-height: 1.55;
 }
 
+.product-soft-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.product-soft-cta .btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.product-soft-cta + .section {
+  padding-top: 3.5rem;
+}
 
 /* ---- Where It Works Grid ---- */
 
@@ -617,47 +632,78 @@
   margin: 0;
 }
 
-/* ---- Capabilities List ---- */
+/* ---- Capabilities (nested under product info) ---- */
+
+.product-page__capabilities {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.product-page__capabilities .section-title {
+  margin-bottom: 0.75rem;
+}
 
 .product-capabilities {
-  margin: 1.5rem 0 2rem;
-  padding-left: 1.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0 0 0 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .product-capabilities li {
   color: var(--color-text-light);
   line-height: 1.65;
   list-style: disc;
+  padding-left: 0.15rem;
 }
 
 .product-capabilities__link {
   display: inline-block;
 }
 
-/* ---- Specs Table Light Theme ---- */
+/* ---- Specs Table (light theme for product page) ---- */
 
 .specs-table--light {
-  border-color: var(--color-border);
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-mixed);
+  overflow: hidden;
 }
 
-.specs-table--light .spec-label {
-  color: var(--color-text);
-  background: var(--color-bg);
-  border-right-color: var(--color-border);
-  border-bottom-color: var(--color-border);
+.specs-table--light .spec-row {
+  display: contents;
 }
 
+.specs-table--light .spec-label,
 .specs-table--light .spec-value {
-  color: var(--color-text-light);
-  border-bottom-color: var(--color-border);
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .specs-table--light .spec-row:last-child .spec-label,
 .specs-table--light .spec-row:last-child .spec-value {
   border-bottom: none;
+}
+
+.specs-table--light .spec-label {
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border-right: 1px solid var(--color-border);
+}
+
+.specs-table--light .spec-value {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.55;
 }
 
 /* ---- Bottom CTA ---- */
@@ -681,6 +727,23 @@
 @media (max-width: 640px) {
   .product-where-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .specs-table--light {
+    grid-template-columns: 1fr;
+    border-radius: 0;
+  }
+
+  .specs-table--light .spec-label {
+    border-right: none;
+    border-bottom: none;
+    padding-bottom: 0.25rem;
+  }
+
+  .specs-table--light .spec-value {
+    padding-top: 0.25rem;
   }
 }
 

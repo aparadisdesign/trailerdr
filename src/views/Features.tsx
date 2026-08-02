@@ -1,8 +1,4 @@
 import Link from "next/link";
-import {
-  PayPalAddToCartButton,
-  PAYPAL_REMOTE_PRODUCT_ID,
-} from "../components/PayPalCart";
 import VideoEmbed from "../components/VideoEmbed";
 import "./Features.css";
 
@@ -204,12 +200,9 @@ function Features() {
               <p className="features-remote__price-note">
                 Separately · +$99 upgrade with a new unit
               </p>
-              <div className="features-remote__cart">
-                <PayPalAddToCartButton
-                  productId={PAYPAL_REMOTE_PRODUCT_ID}
-                  value={130}
-                />
-              </div>
+              <Link href="/product" className="btn btn--primary">
+                Buy Now
+              </Link>
             </div>
           </div>
         </div>
