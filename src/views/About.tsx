@@ -31,7 +31,7 @@ function About() {
           <div
             className="about-hero-collage"
             role="group"
-            aria-label="Trailer Dr. diagnostic tool with standard remote and optional rechargeable remote with work light"
+            aria-label="Trailer Dr. diagnostic tool with included wireless remote"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -45,14 +45,6 @@ function About() {
             <img
               className="about-hero-collage__img about-hero-collage__img--remote about-hero-collage__img--remote-left"
               src="/images/standard-battery-powered-remote.webp"
-              alt=""
-              width={320}
-              height={320}
-            />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              className="about-hero-collage__img about-hero-collage__img--remote about-hero-collage__img--remote-right"
-              src="/images/rechargable-remote-w-flashlight.webp"
               alt=""
               width={320}
               height={320}
@@ -230,9 +222,8 @@ function About() {
               <div>
                 <h3>No Software, Ever</h3>
                 <p>
-                  No apps, no subscriptions, no pairing. Optional
-                  rechargeable remote with integrated work light adds
-                  capability without complexity.
+                  No apps, no subscriptions, no Bluetooth pairing. Plug in,
+                  connect, and test.
                 </p>
               </div>
             </div>

@@ -14,8 +14,6 @@ declare global {
 
 /** Trailer Dr. diagnostic unit — shared PayPal cart product */
 export const PAYPAL_UNIT_PRODUCT_ID = "WFNZ67AZUTRHY";
-/** Standalone extra/replacement rechargeable remote ($130; +$99 upgrade is a unit checkout option) */
-export const PAYPAL_REMOTE_PRODUCT_ID = "PBRRKVWHV5LQ8";
 
 function usePayPalInit(initFn: () => void) {
   const initRef = useRef(false);
