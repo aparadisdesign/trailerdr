@@ -1,0 +1,88 @@
+/* Fill the viewport under the header so the learn section
+   meets the footer instead of leaving a blank paper gap. */
+main:has(.thank-you) {
+  display: flex;
+  flex-direction: column;
+}
+
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.thank-you-hero {
+  max-width: 720px;
+}
+
+.thank-you-hero .section-subtitle {
+  margin-bottom: 1.25rem;
+}
+
+.thank-you-hero__contact {
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+.thank-you-hero__contact a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  white-space: nowrap;
+}
+
+.thank-you-hero__contact a:hover {
+  color: var(--color-accent-on-dark);
+}
+
+.thank-you-learn {
+  flex: 1;
+}
+
+.thank-you-videos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.thank-you-video h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 1.15rem;
+  margin-bottom: 0.45rem;
+}
+
+.thank-you-video p {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.65;
+}
+
+.thank-you-more {
+  margin-top: 2.5rem;
+}
+
+.thank-you-more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  color: var(--color-accent-aaa);
+}
+
+.thank-you-more .material-symbols-outlined {
+  font-size: 1.1rem;
+  transition: transform 0.18s;
+}
+
+.thank-you-more a:hover .material-symbols-outlined {
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .thank-you-videos {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
