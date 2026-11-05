@@ -32,6 +32,7 @@ function Contact() {
       access_key: WEB3FORMS_KEY,
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
       "h-captcha-response": captchaToken,
     };
@@ -124,6 +125,17 @@ function Contact() {
                 <div className="form-field">
                   <input type="email" id="email" name="email" placeholder=" " required />
                   <label htmlFor="email">Email</label>
+                </div>
+                <div className="form-field">
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder=" "
+                    autoComplete="tel"
+                    required
+                  />
+                  <label htmlFor="phone">Phone</label>
                 </div>
                 <div className="form-field form-field--textarea">
                   <textarea id="message" name="message" rows={6} placeholder=" " required value={message} onChange={(e) => setMessage(e.target.value)} />
