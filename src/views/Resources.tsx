@@ -1,5 +1,5 @@
 import VideoEmbed from "../components/VideoEmbed";
-import { pressCoverage, RESOURCE_VIDEOS } from "../data/resourcesData";
+import { pressArticles, RESOURCE_VIDEOS } from "../data/resourcesData";
 import "./Resources.css";
 
 function Resources() {
@@ -23,26 +23,27 @@ function Resources() {
           <p className="section-label">In the News</p>
           <h2 className="section-title">Press Coverage</h2>
           <div className="resources-news">
-            <a
-              className="resources-news-card"
-              href={pressCoverage.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p className="resources-news-card__pub">{pressCoverage.publisher}</p>
-              <h3 className="resources-news-card__title">
-                {pressCoverage.headline}
-              </h3>
-              <p className="resources-news-card__excerpt">
-                {pressCoverage.description}
-              </p>
-              <span className="resources-news-card__link">
-                Read the Article
-                <span className="material-symbols-outlined" aria-hidden="true">
-                  arrow_forward
+            {pressArticles.map((article) => (
+              <a
+                className="resources-news-card"
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={article.id}
+              >
+                <p className="resources-news-card__pub">{article.publisher}</p>
+                <h3 className="resources-news-card__title">{article.headline}</h3>
+                <p className="resources-news-card__excerpt">
+                  {article.description}
+                </p>
+                <span className="resources-news-card__link">
+                  {article.linkLabel}
+                  <span className="material-symbols-outlined" aria-hidden="true">
+                    arrow_forward
+                  </span>
                 </span>
-              </span>
-            </a>
+              </a>
+            ))}
           </div>
         </div>
       </section>

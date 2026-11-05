@@ -5,10 +5,14 @@ export interface ResourceVideo {
 }
 
 export interface PressArticle {
+  id: string;
   headline: string;
   publisher: string;
   url: string;
   description: string;
+  linkLabel: string;
+  datePublished?: string;
+  schemaType: "NewsArticle" | "Article";
 }
 
 export const RESOURCE_VIDEOS: ResourceVideo[] = [
@@ -37,13 +41,29 @@ export const RESOURCE_VIDEOS: ResourceVideo[] = [
   },
 ];
 
-export const pressCoverage: PressArticle = {
-  headline: "Trailer Dr. Featured on CCJDigital.com",
-  publisher: "Commercial Carrier Journal",
-  url: "https://www.ccjdigital.com/maintenance/article/15827483/trailer-dr-tool-simplifies-electrical-air-brake-diagnostics",
-  description:
-    "Commercial Carrier Journal covers how Trailer Dr. simplifies electrical and air brake diagnostics for fleets and repair shops.",
-};
+export const pressArticles: PressArticle[] = [
+  {
+    id: "press-fleet-maintenance",
+    headline: "Trailer Dr. Listed on FleetMaintenance.com",
+    publisher: "Fleet Maintenance",
+    url: "https://www.fleetmaintenance.com/in-the-bay/tools/product/55406624/trailer-dr-trailer-dr",
+    description:
+      "Fleet Maintenance lists Trailer Dr. as a shop tool for one-person electrical and air brake diagnostics in shops, yards, and mobile service.",
+    linkLabel: "View the Listing",
+    datePublished: "2026-10-27",
+    schemaType: "Article",
+  },
+  {
+    id: "press-ccj",
+    headline: "Trailer Dr. Featured on CCJDigital.com",
+    publisher: "Commercial Carrier Journal",
+    url: "https://www.ccjdigital.com/maintenance/article/15827483/trailer-dr-tool-simplifies-electrical-air-brake-diagnostics",
+    description:
+      "Commercial Carrier Journal covers how Trailer Dr. simplifies electrical and air brake diagnostics for fleets and repair shops.",
+    linkLabel: "Read the Article",
+    schemaType: "NewsArticle",
+  },
+];
 
 function videoSchemaId(youtubeId: string): string {
   return `https://thetrailerdr.com/resources#video-${youtubeId}`;
@@ -76,26 +96,31 @@ export const resourcesSchema = {
       about: { "@id": "https://thetrailerdr.com/product#product" },
       publisher: { "@id": "https://thetrailerdr.com/#organization" },
       hasPart: [
-        { "@id": "https://thetrailerdr.com/resources#press-ccj" },
+        ...pressArticles.map((article) => ({
+          "@id": `https://thetrailerdr.com/resources#${article.id}`,
+        })),
         ...RESOURCE_VIDEOS.map((video) => ({
           "@id": videoSchemaId(video.youtubeId),
         })),
       ],
     },
-    {
-      "@type": "NewsArticle",
-      "@id": "https://thetrailerdr.com/resources#press-ccj",
-      headline: pressCoverage.headline,
-      description: pressCoverage.description,
-      url: pressCoverage.url,
-      mainEntityOfPage: pressCoverage.url,
+    ...pressArticles.map((article) => ({
+      "@type": article.schemaType,
+      "@id": `https://thetrailerdr.com/resources#${article.id}`,
+      headline: article.headline,
+      description: article.description,
+      url: article.url,
+      mainEntityOfPage: article.url,
+      ...(article.datePublished
+        ? { datePublished: article.datePublished }
+        : {}),
       isPartOf: { "@id": "https://thetrailerdr.com/resources#webpage" },
       publisher: {
         "@type": "Organization",
-        name: pressCoverage.publisher,
+        name: article.publisher,
       },
       about: { "@id": "https://thetrailerdr.com/product#product" },
-    },
+    })),
     ...videoEntities,
     {
       "@type": "BreadcrumbList",
