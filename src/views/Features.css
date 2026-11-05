@@ -155,43 +155,6 @@
   line-height: 1.65;
 }
 
-/* ---- Optional Remote (two-column) ---- */
-
-.features-remote {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 4rem;
-  align-items: stretch;
-}
-
-.features-remote__image {
-  width: 100%;
-  height: 100%;
-  min-height: 22rem;
-  border-radius: var(--radius-mixed);
-  object-fit: cover;
-  object-position: right center;
-}
-
-.features-remote__content p {
-  color: var(--color-text-light);
-  line-height: 1.75;
-  margin-bottom: 1rem;
-}
-
-.features-remote__price {
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--color-accent-aaa) !important;
-  margin-bottom: 0.25rem !important;
-}
-
-.features-remote__price-note {
-  font-size: 0.9rem !important;
-  color: var(--color-text-light) !important;
-  margin-bottom: 1.5rem !important;
-}
-
 /* ---- Where It Works ---- */
 
 .features-where-grid {
@@ -338,17 +301,6 @@
 
   .features-field-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .features-remote {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .features-remote__image {
-    height: auto;
-    aspect-ratio: 4 / 3;
-    max-height: 28rem;
   }
 
   .features-price {

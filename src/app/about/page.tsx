@@ -72,12 +72,6 @@ const aboutSchema = {
               "@id": "https://thetrailerdr.com/product#remote-standard",
             },
           },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@id": "https://thetrailerdr.com/product#remote-rechargeable",
-            },
-          },
         ],
       },
     },

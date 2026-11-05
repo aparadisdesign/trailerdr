@@ -11,7 +11,7 @@ const specs = [
   { label: "Air Input", value: "125 lbs max air output (self-regulated)" },
   { label: "Connection", value: "7 Way Round Pin" },
   { label: "Controls", value: "Manual & Remote" },
-  { label: "Remote Batteries", value: "A23 12V Alkaline (standard); optional rechargeable remote with work light +$99 with unit or $130 separately" },
+  { label: "Remote Batteries", value: "A23 12V Alkaline" },
   { label: "Weight", value: "15.2 lbs, lightest in its class" },
   { label: "Dimensions", value: "12 x 10 x 4 in (H x W x D), smallest in its class" },
   { label: "Materials", value: "NEMA 1/2/3/3R/3S/4/4X/6/6P/12/13 Polycarbonate" },
@@ -48,8 +48,8 @@ function Features() {
           <div className="features-hero__visual">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/rechargable-remote-w-flashlight.webp"
-              alt="Trailer Dr. rechargeable remote control with integrated work light"
+              src="/images/standard-battery-powered-remote.webp"
+              alt="Trailer Dr. standard wireless remote included with every unit"
               className="features-hero__image"
             />
           </div>
@@ -171,45 +171,8 @@ function Features() {
         </div>
       </section>
 
-      {/* Optional Remote */}
-      <section className="section">
-        <div className="container">
-          <div className="features-remote">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/trailer-dr-rechargeable-remote-hero.jpeg"
-              alt="Trailer Dr. optional rechargeable remote with integrated work light"
-              className="features-remote__image"
-            />
-            <div className="features-remote__content">
-              <p className="section-label">Optional Extra or Replacement</p>
-              <h2 className="section-title">Rechargeable Remote with Work Light</h2>
-              <p>
-                Every Trailer Dr. ships with one standard wireless remote. For
-                low-visibility work, or as a spare, the rechargeable remote adds
-                an integrated work light so you keep both hands free and both
-                eyes on the trailer.
-              </p>
-              <p>
-                Upgrade when you buy a new unit for +$99 (choose it in Add to
-                Cart on the product page). Bought separately as an extra or
-                replacement: $130. Remotes must be paired with your unit —
-                pairing instructions and a wall plug-in charger are included.
-              </p>
-              <p className="features-remote__price">$130</p>
-              <p className="features-remote__price-note">
-                Separately · +$99 upgrade with a new unit
-              </p>
-              <Link href="/product" className="btn btn--primary">
-                Buy Now
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Where It Works */}
-      <section className="section section--muted-solid">
+      <section className="section">
         <div className="container">
           <p className="section-label">Deployment</p>
           <h2 className="section-title">Where Trailer Dr. Works</h2>
