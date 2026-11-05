@@ -15,7 +15,7 @@
   max-width: 100%;
 }
 
-/* ---- About hero: layered product + remotes ---- */
+/* ---- About hero: layered product + remote ---- */
 
 .about-hero-collage {
   position: relative;
@@ -59,17 +59,6 @@
   bottom: 8%;
   transform: rotate(8deg);
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.45));
-}
-
-/* Rechargeable remote: smaller, in front */
-.about-hero-collage__img--remote-right {
-  z-index: 2;
-  width: 30%;
-  max-width: 190px;
-  right: 4%;
-  bottom: 10%;
-  transform: rotate(-10deg);
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.42));
 }
 
 /* ---- Image Placeholders ---- */

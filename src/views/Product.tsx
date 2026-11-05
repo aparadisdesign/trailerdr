@@ -2,10 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import {
-  PayPalAddToCartButton,
-  PAYPAL_REMOTE_PRODUCT_ID,
-} from "../components/PayPalCart";
+import { PayPalAddToCartButton } from "../components/PayPalCart";
 import "./Product.css";
 
 const gallery = [
@@ -14,7 +11,6 @@ const gallery = [
   { src: "/images/product-spinner-v2/4J0A2949.webp",      alt: "Trailer Dr. diagnostic tool: Back View" },
   { src: "/images/product-spinner-v2/4J0A2957.webp",      alt: "Trailer Dr. diagnostic tool: Right Side View" },
   { src: "/images/standard-battery-powered-remote.webp",  alt: "Standard remote (included)" },
-  { src: "/images/rechargable-remote-w-flashlight.webp",  alt: "Optional rechargeable remote with work light (+$99 with unit, $130 separately)" },
 ];
 
 const specs = [
@@ -26,7 +22,7 @@ const specs = [
   { label: "Air Input", value: "125 lbs max air output (self-regulated)" },
   { label: "Connection", value: "7 Way Round Pin" },
   { label: "Controls", value: "Manual & Remote" },
-  { label: "Remote Batteries", value: "A23 12V Alkaline (standard); optional rechargeable remote with work light +$99 with unit or $130 separately" },
+  { label: "Remote Batteries", value: "A23 12V Alkaline" },
   { label: "Weight", value: "15.2 lbs, lightest in its class" },
   { label: "Dimensions", value: "12 x 10 x 4 in (H x W x D), smallest in its class" },
   { label: "Materials", value: "NEMA 1/2/3/3R/3S/4/4X/6/6P/12/13 Polycarbonate" },
@@ -130,27 +126,6 @@ function Product() {
             <div className="product-page__purchase">
               <div className="product-page__add-to-cart">
                 <PayPalAddToCartButton />
-              </div>
-              <div className="product-page__addon">
-                <p className="product-page__addon-label">Rechargeable Remote with Work Light</p>
-                <p>
-                  <strong>+$99</strong> when you upgrade at checkout with a new
-                  unit · <strong>$130</strong> bought separately
-                </p>
-                <p className="product-page__addon-note">
-                  Every Trailer Dr. ships with one standard remote. To upgrade
-                  with a new unit, choose the rechargeable remote in Add to Cart
-                  above (+$99, total $3,294). Use the button below only for an
-                  extra or replacement remote ($130). Remotes must be paired with
-                  your unit — pairing instructions and a wall plug-in charger are
-                  included.
-                </p>
-                <div className="product-page__addon-cart">
-                  <PayPalAddToCartButton
-                    productId={PAYPAL_REMOTE_PRODUCT_ID}
-                    value={130}
-                  />
-                </div>
               </div>
             </div>
           </div>
@@ -260,13 +235,8 @@ function Product() {
               },
               {
                 feature: "Remote control",
-                ours: "9-channel rechargeable remote. All functions from the rear of the trailer with no need to return to the box.",
+                ours: "9-channel wireless remote. All functions from the rear of the trailer with no need to return to the box.",
                 theirs: "Limited channels and manual interaction at the box to switch tests; not everything is available from the remote.",
-              },
-              {
-                feature: "Rechargeable remote",
-                ours: "Optional rechargeable remote with integrated work light: +$99 when purchased with the unit, or $130 separately. Standard battery remote included.",
-                theirs: "Disposable battery remotes only. No rechargeable option available.",
               },
               {
                 feature: "Portability",
