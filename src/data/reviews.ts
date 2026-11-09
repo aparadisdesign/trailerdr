@@ -1,7 +1,8 @@
 /**
  * Customer reviews shown on the site (from Google reviews).
- * Single source for the reviews carousel and the Product review schema,
- * so the markup always matches what visitors can see.
+ * Used by the reviews carousel. Not marked up as Review schema: these are
+ * Google reviews, and Google's guidelines don't allow marking up reviews
+ * collected on another site.
  */
 export const REVIEWS: { text: string; author: string }[] = [
   {

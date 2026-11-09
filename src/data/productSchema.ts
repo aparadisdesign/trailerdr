@@ -1,5 +1,3 @@
-import { REVIEWS } from "./reviews";
-
 const seller = {
   "@type": "Organization",
   "@id": "https://thetrailerdr.com/#organization",
@@ -55,28 +53,6 @@ const manufacturer = {
   name: "Trailer Dr.",
 } as const;
 
-export const productReviews = REVIEWS.map((r) => ({
-  "@type": "Review",
-  reviewRating: {
-    "@type": "Rating",
-    ratingValue: "5",
-    bestRating: "5",
-  },
-  author: {
-    "@type": "Person",
-    name: r.author,
-  },
-  reviewBody: r.text,
-}));
-
-export const productAggregateRating = {
-  "@type": "AggregateRating",
-  ratingValue: "5",
-  reviewCount: String(REVIEWS.length),
-  bestRating: "5",
-  worstRating: "1",
-} as const;
-
 export const productImages = [
   "https://thetrailerdr.com/images/trailerdr-product-image.webp",
   "https://thetrailerdr.com/images/product-spinner-v2/4J0A2941.webp",
@@ -114,8 +90,6 @@ export const productSchemaCore = {
   brand,
   manufacturer,
   offers: unitOffer,
-  aggregateRating: productAggregateRating,
-  review: productReviews,
 } as const;
 
 /** Extra / replacement standard remote — PayPal product option $75 */
@@ -180,8 +154,6 @@ export const productPageSchema = {
         value: "4",
         unitCode: "INH",
       },
-      aggregateRating: productAggregateRating,
-      review: productReviews,
       offers: unitOffer,
       isRelatedTo: {
         "@id": "https://thetrailerdr.com/product#remote-standard",
