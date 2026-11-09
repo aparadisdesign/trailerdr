@@ -1,3 +1,5 @@
+import { REVIEWS } from "./reviews";
+
 const seller = {
   "@type": "Organization",
   "@id": "https://thetrailerdr.com/#organization",
@@ -53,41 +55,24 @@ const manufacturer = {
   name: "Trailer Dr.",
 } as const;
 
-export const productReviews = [
-  {
-    "@type": "Review",
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-    },
-    author: {
-      "@type": "Person",
-      name: "Jerrold Warne",
-    },
-    reviewBody:
-      "Incredible build quality and saved us hours on every trailer inspection. Worth every penny.",
+export const productReviews = REVIEWS.map((r) => ({
+  "@type": "Review",
+  reviewRating: {
+    "@type": "Rating",
+    ratingValue: "5",
+    bestRating: "5",
   },
-  {
-    "@type": "Review",
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-    },
-    author: {
-      "@type": "Organization",
-      name: "GBD Farms",
-    },
-    reviewBody:
-      "Game changer for air brake diagnostics. One person can now do what used to take two.",
+  author: {
+    "@type": "Person",
+    name: r.author,
   },
-] as const;
+  reviewBody: r.text,
+}));
 
 export const productAggregateRating = {
   "@type": "AggregateRating",
   ratingValue: "5",
-  reviewCount: "2",
+  reviewCount: String(REVIEWS.length),
   bestRating: "5",
   worstRating: "1",
 } as const;

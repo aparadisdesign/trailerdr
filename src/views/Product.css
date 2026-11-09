@@ -718,45 +718,10 @@
   }
 }
 
-
 /* ---- Customer Reviews ---- */
 
-.product-reviews {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .product-reviews {
-    grid-template-columns: 1fr;
-  }
-}
-
-.product-reviews__card {
-  margin: 0;
-  padding: 1.5rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-mixed);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.product-reviews__stars {
-  color: var(--color-accent-aaa);
-  font-size: 1.125rem;
-  letter-spacing: 0.1em;
-}
-
-.product-reviews__quote {
-  margin: 0;
-  font-size: 1.0625rem;
-  line-height: 1.6;
-}
-
-.product-reviews__author {
-  font-weight: 700;
-  font-size: 0.9375rem;
+.product-reviews__title {
+  margin: 3rem 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
 }

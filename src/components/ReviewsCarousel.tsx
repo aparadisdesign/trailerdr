@@ -1,31 +1,11 @@
 "use client";
 import { useRef } from "react";
+import { REVIEWS } from "../data/reviews";
+import "./ReviewsCarousel.css";
 
 const GOOGLE_REVIEWS_URL =
   "https://www.google.com/maps/place/Trailer+Dr./@47.2456272,-68.5801316,17z/data=!4m8!3m7!1s0x4cbc51c081c63881:0x9760e7e967287ae1!8m2!3d47.2456272!4d-68.5775567!9m1!1b1!16s%2Fg%2F11ry610_lr?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D";
 
-const REVIEWS = [
-  {
-    text: "We run 12,200 trailers a year using his product. We are very happy with his product and customer service.",
-    author: "Jim, Falcon Transportation",
-  },
-  {
-    text: "Excellent quality trailer light and ABS tester. Rugged unit can handle just about anything and perform. An essential for any shop.",
-    author: "Jerrold Warne",
-  },
-  {
-    text: "This product allows for very efficient diagnosing of air brake issues and electrical problems. Saves our employees time and frustration. It's the only one-man diagnostic trailer tool I'd recommend.",
-    author: "Steve Theriault, TNT Road Company",
-  },
-  {
-    text: "Great purchase!! User friendly and saves time. Best purchase for trailer maintenance available.",
-    author: "GBD Farms",
-  },
-  {
-    text: "Great product, great for one man repairs and test on trailers. Remote controlled from under the trailer, back of trailer, or on top. Great for wiring failures.",
-    author: "Jeff Blanchette",
-  },
-];
 
 export default function ReviewsCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);

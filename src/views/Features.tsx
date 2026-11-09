@@ -1,5 +1,6 @@
 import Link from "next/link";
 import VideoEmbed from "../components/VideoEmbed";
+import ReviewsCarousel from "../components/ReviewsCarousel";
 import "./Features.css";
 
 const specs = [
@@ -214,6 +215,15 @@ function Features() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="section">
+        <div className="container">
+          <p className="section-label">Trusted by Professionals</p>
+          <h2 className="section-title">What Our Customers Say</h2>
+          <ReviewsCarousel />
         </div>
       </section>
 
