@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { PayPalAddToCartButton } from "../components/PayPalCart";
+import { productReviews } from "../data/productSchema";
 import "./Product.css";
 
 const gallery = [
@@ -40,7 +41,7 @@ function Product() {
           <div className="product-page__info">
             <p className="section-label">Trailer Dr.</p>
             <h1 className="product-page__title">
-              Electrical &amp; Air Brake Trailer Diagnostic Tool
+              Semi-Trailer Light &amp; Air Brake Tester
             </h1>
             <p className="product-page__description">
               Portable semi-trailer light and air brake tester built to handle
@@ -124,9 +125,19 @@ function Product() {
               </div>
             </div>
             <div className="product-page__purchase">
+              <div className="product-page__price">
+                <span className="product-page__price-amount">$3,195</span>
+                <span className="product-page__price-note">
+                  Free shipping in the contiguous USA · 30-day free trial · 1-year warranty
+                </span>
+              </div>
               <div className="product-page__add-to-cart">
                 <PayPalAddToCartButton />
               </div>
+              <p className="product-page__po">
+                Buying for a fleet, or need a quote or purchase order? Call Bruce at{" "}
+                <a href="tel:+12072314967">(207) 231-4967</a>.
+              </p>
             </div>
           </div>
         </div>
@@ -323,6 +334,23 @@ function Product() {
                 Fleet maintenance company, USA
               </p>
             </div>
+          </div>
+
+          <div className="product-reviews" aria-label="Customer reviews">
+            {productReviews.map((r) => (
+              <figure className="product-reviews__card" key={r.author.name}>
+                <div
+                  className="product-reviews__stars"
+                  aria-label={`${r.reviewRating.ratingValue} out of 5 stars`}
+                >
+                  {"★★★★★"}
+                </div>
+                <blockquote className="product-reviews__quote">
+                  &ldquo;{r.reviewBody}&rdquo;
+                </blockquote>
+                <figcaption className="product-reviews__author">{r.author.name}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>

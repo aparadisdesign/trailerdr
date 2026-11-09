@@ -53,7 +53,7 @@ const manufacturer = {
   name: "Trailer Dr.",
 } as const;
 
-const productReviews = [
+export const productReviews = [
   {
     "@type": "Review",
     reviewRating: {
