@@ -14,6 +14,10 @@ const gallery = [
   { src: "/images/standard-battery-powered-remote.webp",  alt: "Standard remote (included)" },
 ];
 
+const QUOTE_REQUEST_HREF = `/contact?message=${encodeURIComponent(
+  "Hi Bruce,\n\nI'd like a quote for Trailer Dr.\n\nCompany:\nNumber of units:\nDo you need a purchase order or invoice?\n\nThanks,"
+)}`;
+
 const specs = [
   { label: "Price", value: "$3,195, includes shipping within the USA" },
   { label: "Warranty", value: "1 Year" },
@@ -136,7 +140,8 @@ function Product() {
               </div>
               <p className="product-page__po">
                 Buying for a fleet, or need a quote or purchase order? Call Bruce at{" "}
-                <a href="tel:+12072314967">(207) 231-4967</a>.
+                <a href="tel:+12072314967">(207) 231-4967</a> or{" "}
+                <Link href={QUOTE_REQUEST_HREF}>send a quote request</Link>.
               </p>
             </div>
           </div>
